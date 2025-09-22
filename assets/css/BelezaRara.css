@@ -3,6 +3,7 @@ body {
   /* Remove a margem padrão do navegador em volta da página */
   font-family: Arial, Helvetica, sans-serif;
   /* Define Arial como fonte principal, com fallback para fonte sem serifa */
+  
 }
 
 .top-bar {
@@ -50,7 +51,7 @@ body {
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 21px;
   /* Tamanho da fonte de 20px */
   flex-shrink: 0;
   /* Impede que o logo encolha em flex containers */
