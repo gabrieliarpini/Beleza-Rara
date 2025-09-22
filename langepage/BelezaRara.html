@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Beleza Rara</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css"> <!-- Ajuste o caminho se necessário -->
+    <link rel="stylesheet" href="../assets/css/BelezaRara.css"> <!-- Ajuste o caminho se necessário -->
+</head>
+
+<body>
+    <!-- Faixa preta no topo -->
+    <div class="top-bar">
+        FRETE GRÁTIS EM TODAS AS COMPRAS
+    </div>
+
+    <!-- Cabeçalho principal -->
+    <header class="header">
+
+        <!-- Linha superior -->
+        <div class="header-top">
+            <!-- Logo central -->
+            <div class="logo">
+                <img src="../assets/css/img/logoempresa.png" width="200" alt="Logo da empresa">
+            </div>
+
+            <!-- Ícones à direita -->
+            <div class="icons">
+                <div class="account">
+                    <img src="../assets/css/img/Usuario.png" alt="Conta">
+                    <div>
+                        <span id="usuarioTexto">Acesse sua conta</span>
+                    </div>
+                </div>
+                <img id="iconeBusca" src="https://img.icons8.com/ios/24/search--v1.png" alt="Buscar"
+                    style="cursor: pointer;" />
+                <img src="https://img.icons8.com/ios/24/shopping-bag--v1.png" id="iconeCarrinho" alt="Carrinho">
+            </div>
+        </div>
+
+        <!-- Linha inferior - categorias -->
+        <nav class="nav-bar">
+            <ul>
+                <button type="button" onclick="filtrarProdutos('todos')">TODOS</button>
+                <button type="button" onclick="filtrarProdutos('perfume')">PERFUMES</button>
+                <button type="button" onclick="filtrarProdutos('maquiagem')">MAQUIAGENS</button>
+                <button type="button" onclick="filtrarProdutos('cremes')">CREMES</button>
+                <button type="button" onclick="filtrarProdutos('skincare')">SKINCARE</button>
+                <button type="button" onclick="filtrarProdutos('sabonete')">SABONETES</button>
+                <button type="button" onclick="filtrarProdutos('kits')">KITS</button>
+                <button type="button" onclick="filtrarProdutos('historia')">HISTÓRIA</button>
+                <button type="button" onclick="filtrarProdutos('localizacao')">LOCALIZAÇÃO</button>
+                <button type="button" onclick="filtrarProdutos('apoios')">APOIOS</button>
+                <button type="button" onclick="filtrarProdutos('politicas')">POLÍTICAS</button>
+                <button type="button" onclick="filtrarProdutos('projetos')">PROJETO</button>
+            </ul>
+        </nav>
+
+
+        <!-- banner-->
+        <div class="banner" id="banner">
+            <img src="../assets/css/img/banner.png" alt="banner da empresa">
+        </div>
+
+        <h2 id="titulo-categoria" class="titulo-categoria"></h2>
+    </header>
+
+    <section class="produtos">
+        <div class="produtos-grid">
+
+            <!-- Cremes unissex -->
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/encantotostadocremeunissex.PNG" alt="Creme encanto tostado">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.8</span>
+                    <span class="tag">Best-Seller</span>
+                </div>
+                <p class="nome-produto">Creme encanto tostado</p>
+                <p class="descricao-produto">Calor marcante com notas envolventes.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme encanto tostado" data-preco="31.90">Comprar</a>
+            </div>
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/Terradouradacremeunissex.PNG" alt="Creme terra dourada">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">3.2</span>
+                </div>
+                <p class="nome-produto">Creme terra dourada</p>
+                <p class="descricao-produto">Luxo e sofisticação em um só creme.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme terra dourada" data-preco="31.90">Comprar</a>
+            </div>
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/maresiaocidentlcremeunissex.PNG" alt="Creme maresia ocidental">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">3.7</span>
+                </div>
+                <p class="nome-produto">Creme maresia ocidental</p>
+                <p class="descricao-produto">Frescor intenso em cada toque.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme maresia ocidental" data-preco="31.90">Comprar</a>
+            </div>
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/sonhoencantadounissex.PNG" alt="Creme sonho encantado">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Creme sonho encantado</p>
+                <p class="descricao-produto">Toque leve e mágico para o dia a dia.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme sonho encantado" data-preco="31.90">Comprar</a>
+            </div>
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/ceumarinhocremeunissex.PNG" alt="Creme céu marinho">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">3.3</span>
+                </div>
+                <p class="nome-produto">Creme céu marinho</p>
+                <p class="descricao-produto">Hidratação com energia do oceano.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme céu marinho" data-preco="31.90">Comprar</a>
+            </div>
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/flordemelcremeunissex.PNG" alt="Creme flor de mel">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.1</span>
+                </div>
+                <p class="nome-produto">Creme flor de mel</p>
+                <p class="descricao-produto">Doçura nutritiva para sua pele.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme flor de mel" data-preco="31.90">Comprar</a>
+            </div>
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/Auroraserenacremeunissex.PNG" alt="Creme aurora serena ">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.2</span>
+                </div>
+                <p class="nome-produto">Creme aurora serena</p>
+                <p class="descricao-produto">Hidratação nutritiva para pele macia e radiante.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme aurora serena" data-preco="31.90">Comprar</a>
+            </div>
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/Brisanoturnacremeunissex.PNG" alt="Creme brisa noturna">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.6</span>
+                </div>
+                <p class="nome-produto">Creme brisa noturna</p>
+                <p class="descricao-produto">Creme noturno que hidrata profundamente.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme brisa noturna" data-preco="31.90">Comprar</a>
+            </div>
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/Orvalhocremeunissex.PNG" alt="Creme orvalho">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.6</span>
+                </div>
+                <p class="nome-produto">Creme orvalho</p>
+                <p class="descricao-produto">Hidratação refrescante para revitalizar a pele.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme orvalho" data-preco="31.90">Comprar</a>
+            </div>
+
+            <div class="produto cremes">
+                <img src="../assets/css/img/creme/Luzdoorientecremeunissex.PNG" alt="Creme luz do oriente">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.6</span>
+                </div>
+                <p class="nome-produto">Creme luz do oriente </p>
+                <p class="descricao-produto">Nutrição intensa com toque sedoso e luxuoso.</p>
+                <p class="preco-produto">R$ 31,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme luz do oriente" data-preco="31.90">Comprar</a>
+            </div>
+
+            <!-- Perfume masculino -->
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/ervasecamasculinoperfume.PNG" alt="Perfume erva seca">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.9</span>
+                    <span class="tag">Best-Seller</span>
+                </div>
+                <p class="nome-produto">Perfume erva seca</p>
+                <p class="descricao-produto">Especiaria quente com alma intensa e marcante.</p>
+                <p class="preco-produto">R$ 79,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume erva seca" data-preco="79.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/jardimdealmuramasculinoperfume.png"
+                    alt="Perfume jardim de almura">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.9</span>
+                </div>
+                <p class="nome-produto">Perfume j. de almura</p>
+                <p class="descricao-produto">Um sopro floral envolvente, puro e encantador.</p>
+                <p class="preco-produto">R$ 84,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume jardim de almura" data-preco="84.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/maresiaocidentalmasculinoperfume.png"
+                    alt="Perfume maresia ocidental">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.8</span>
+                </div>
+                <p class="nome-produto">Perfume m. ocidental</p>
+                <p class="descricao-produto">Brisa marinha com um toque de liberdade e frescor.</p>
+                <p class="preco-produto">R$ 74,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume maresia ocidental" data-preco="74.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/orvalhosecomasculinoperfume.png"
+                    alt="Perfume orvalho seco">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Perfume orvalho seco</p>
+                <p class="descricao-produto">Brisa marinha com um toque de liberdade e frescor.</p>
+                <p class="preco-produto">R$ 69,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume orvalho seco" data-preco="69.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/sombranobremasculinoperfume.png"
+                    alt="Perfume sombra nobre">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.1</span>
+                </div>
+                <p class="nome-produto">Perfume sombra nobre</p>
+                <p class="descricao-produto">Elegância profunda com notas de madeira e mistério.</p>
+                <p class="preco-produto">R$ 69,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume sombra nobre" data-preco="69.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/terralimonemasculinoperfume.png"
+                    alt="Perfume terra limone">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">3.9</span>
+                </div>
+                <p class="nome-produto">Perfume terra limone</p>
+                <p class="descricao-produto">Brilho solar em um cítrico vivo e revigorante.</p>
+                <p class="preco-produto">R$ 64,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume terra limone" data-preco="64.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/Goldensansmasculinoperfume.PNG" alt="Perfume golden sans">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">3.5</span>
+                </div>
+                <p class="nome-produto">Perfume golden sans</p>
+                <p class="descricao-produto">Aroma quente inspirado no brilho das areias.</p>
+                <p class="preco-produto">R$ 69,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume golden sans" data-preco="69.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/Cobaltbreezemasculinoperfume.PNG"
+                    alt="Perfume cobalt breeze">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">3.1</span>
+                </div>
+                <p class="nome-produto">Perfume cobalt breeze</p>
+                <p class="descricao-produto">Aroma vibrante, perfeito para dias cheios de energia.</p>
+                <p class="preco-produto">R$ 74,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume cobalt breeze" data-preco="74.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/Aceanicmasculinoperfume.PNG" alt="Perfume aceanic">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">3.3</span>
+                </div>
+                <p class="nome-produto">Perfume aceanic</p>
+                <p class="descricao-produto">Essência sofisticada, ideal para quem ama leveza.</p>
+                <p class="preco-produto">R$ 92,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume aceanic" data-preco="92.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="masculino">
+                <img src="../assets/css/img/perfume masculino/Azuremasculinoperfume.PNG" alt="Perfume Azure">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">3.7</span>
+                </div>
+                <p class="nome-produto">Perfume azure</p>
+                <p class="descricao-produto">Perfume marcante e refrescante.</p>
+                <p class="preco-produto">R$ 86,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume azure" data-preco="86.90">Comprar</a>
+            </div>
+
+            <!-- Perfume feminino -->
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/ceumarinho.PNG" alt="Perfume céu marinho">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.2</span>
+                    <span class="tag">Best-Seller</span>
+                </div>
+                <p class="nome-produto">Perfume céu marinho</p>
+                <p class="descricao-produto">Mistério e sofisticação para noites inesquecíveis.</p>
+                <p class="preco-produto">R$ 76,30</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume céu marinho" data-preco="76.30">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/liriofeminino.PNG" alt="Perfume lírio com baunilha">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Perfume lírio</p>
+                <p class="descricao-produto">Delicadeza e magia em cada gota.</p>
+                <p class="preco-produto">R$ 85,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume lírio" data-preco="85.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/sonhoencantado.PNG" alt="Perfume sonho encantado">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Perfume s. encantado</p>
+                <p class="descricao-produto">Frescor e elegância que inspiram liberdade.</p>
+                <p class="preco-produto">R$ 59,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume sonho encantado" data-preco="59.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/Florvistosa.PNG" alt="Perfume flor vistosa">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.1</span>
+                </div>
+                <p class="nome-produto">Perfume flor vistosa</p>
+                <p class="descricao-produto">Aroma floral radiante que transmite elegância.</p>
+                <p class="preco-produto">R$ 69,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume flor vistosa" data-preco="69.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/Goldenamber.PNG" alt="Perfume golden amber">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.1</span>
+                </div>
+                <p class="nome-produto">Perfume golden amber</p>
+                <p class="descricao-produto">Fragrância sofisticada com notas amadeiradas.</p>
+                <p class="preco-produto">R$ 79,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume golden amber" data-preco="79.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/lirioradiante.PNG" alt="Perfume lírio radiante">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.9</span>
+                </div>
+                <p class="nome-produto">Perfume lírio radiante</p>
+                <p class="descricao-produto">Perfume delicado, com toque floral luminoso.</p>
+                <p class="preco-produto">R$ 72,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume lírio radiante" data-preco="72.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/lizfloresce.PNG" alt="Perfume liz floresce">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.1</span>
+                </div>
+                <p class="nome-produto">Perfume liz floresce</p>
+                <p class="descricao-produto">Essência fresca e vibrante, ideal para momentos leves.</p>
+                <p class="preco-produto">R$ 69,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume liz floresce" data-preco="69.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/Lyli.PNG" alt="Perfume lyli">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.2</span>
+                </div>
+                <p class="nome-produto">Perfume lyli</p>
+                <p class="descricao-produto">Fragrância intensa com toque floral envolvente.</p>
+                <p class="preco-produto">R$ 89,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume lyli" data-preco="89.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/nocturnal.PNG" alt="Perfume nocturnal">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.8</span>
+                </div>
+                <p class="nome-produto">Perfume nocturnal</p>
+                <p class="descricao-produto">Perfume elegante e sedutor para noites marcantes.</p>
+                <p class="preco-produto">R$ 96,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume nocturnal" data-preco="96.90">Comprar</a>
+            </div>
+
+            <div class="produto perfume" data-genero="feminino">
+                <img src="../assets/css/img/perfume feminino/Scarletlust.PNG" alt="Perfume scarlet lust">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Perfume scarlet lust</p>
+                <p class="descricao-produto">Aroma ousado que desperta desejo.</p>
+                <p class="preco-produto">R$ 98,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume scarlet lust" data-preco="98.90">Comprar</a>
+            </div>
+
+            <!-- Sabonete liquido -->
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/alvorecer.PNG" alt="Sabonete alvorecer">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Sabonete alvorecer</p>
+                <p class="descricao-produto">Frescura suave para um início leve.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete alvorecer" data-preco="46.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/brisacalma.PNG" alt="Sabonete brisa calma">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.7</span>
+                </div>
+                <p class="nome-produto">Sabonete brisa calma</p>
+                <p class="descricao-produto">Conforto e suavidade para sua pele.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete brisa calma" data-preco="46.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/campoverde.PNG" alt="Sabonete campo verde">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Sabonete campo verde</p>
+                <p class="descricao-produto">Notas herbais com toque refrescante.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete campo verde" data-preco="46.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/citrino dourado.PNG" alt="Sabonete citrico dourado">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Sabonete citrico dourado</p>
+                <p class="descricao-produto">Explosão vibrante de frutas cítricas.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete citrico dourado" data-preco="46.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/floralpuro.PNG" alt="Sabonete floral puro">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Sabonete floral puro</p>
+                <p class="descricao-produto">Aroma delicado e autenticamente floral.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete floral puro" data-preco="46.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/luzdeipe.PNG" alt="Sabonete luz de ipê">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Sabonete luz de ipê</p>
+                <p class="descricao-produto">Elegância com notas florais marcantes.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete luz de ipê" data-preco="46.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/nuvemquente.PNG" alt="Sabonete nuvem quente">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.1</span>
+                </div>
+                <p class="nome-produto">Sabonete nuvem quente</p>
+                <p class="descricao-produto">Frescura cremosa com leve intensidade.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete nuvem quente" data-preco="46.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/orvalhosuave.PNG" alt="Sabonete orvalho suave">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.8</span>
+                </div>
+                <p class="nome-produto">Sabonete orvalho suave</p>
+                <p class="descricao-produto">Hidratação com fragrância verde suave.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete orvalho suave" data-preco="46.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/soltropical.PNG" alt="Sabonete sol tropical">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.9</span>
+                </div>
+                <p class="nome-produto">Sabonete sol tropical</p>
+                <p class="descricao-produto">Calor exótico com energia vibrante.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete sol tropical" data-preco="46.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete líquido/áurea.PNG" alt="Sabonete áurea">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.7</span>
+                </div>
+                <p class="nome-produto">Sabonete áurea</p>
+                <p class="descricao-produto">Mistério envolvente com notas sofisticadas.</p>
+                <p class="preco-produto">R$ 46,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete áurea" data-preco="46.90">Comprar</a>
+            </div>
+
+            <!-- Sabonete em barra -->
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/baunilha.PNG" alt="Sabonete baunilha">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Sabonete baunilha</p>
+                <p class="descricao-produto">Doce aroma com toque aconchegante.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete baunilha" data-preco="6.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/cereja.PNG" alt="Sabonete cereja">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.7</span>
+                </div>
+                <p class="nome-produto">Sabonete cereja</p>
+                <p class="descricao-produto">Fragrância frutada, suave e marcante.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete cereja" data-preco="6.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/cravo.PNG" alt="Sabonete cravo">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Sabonete cravo</p>
+                <p class="descricao-produto">Aroma intenso e revitalizante natural.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete cravo" data-preco="6.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/ervaseca.PNG" alt="Sabonete erva seca">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.6</span>
+                </div>
+                <p class="nome-produto">Sabonete erva seca</p>
+                <p class="descricao-produto">Toque herbal para pele equilibrada.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete erva seca" data-preco="6.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/framboesa.PNG" alt="Sabonete framboesa">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.8</span>
+                </div>
+                <p class="nome-produto">Sabonete framboesa</p>
+                <p class="descricao-produto">Doce e suavemente refrescante.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete framboesa" data-preco="6.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/jasmim.PNG" alt="Sabonete jasmim">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.2</span>
+                </div>
+                <p class="nome-produto">Sabonete jasmim</p>
+                <p class="descricao-produto">Floral delicado com aroma relaxante.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete jasmim" data-preco="6.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/lavanda.PNG" alt="Sabonete lavanda">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.9</span>
+                </div>
+                <p class="nome-produto">Sabonete lavanda</p>
+                <p class="descricao-produto">Calmante natural com toque floral.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete lavanda" data-preco="6.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/maracuja.PNG" alt="Sabonete maracujá">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.4</span>
+                </div>
+                <p class="nome-produto">Sabonete maracujá</p>
+                <p class="descricao-produto">Suavidade tropical com frescor duradouro.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete maracujá" data-preco="6.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/maresia.PNG" alt="Sabonete maresia">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.1</span>
+                </div>
+                <p class="nome-produto">Sabonete maresia</p>
+                <p class="descricao-produto">Brisa do mar na sua pele.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete maresia" data-preco="6.90">Comprar</a>
+            </div>
+
+            <div class="produto sabonete">
+                <img src="../assets/css/img/sabonete barra/pêssego.PNG" alt="Sabonete pêssego">
+                <div class="selo-avaliacao">
+                    <span class="estrela">★</span>
+                    <span class="nota">4.6</span>
+                </div>
+                <p class="nome-produto">Sabonete pêssego</p>
+                <p class="descricao-produto">Aroma suave com hidratação leve.</p>
+                <p class="preco-produto">R$ 6,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sabonete pêssego" data-preco="6.90">Comprar</a>
+            </div>
+
+            <!-- Skin care -->
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/acido.PNG" alt="Ácido HAC">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Sérum ácido HAC</p>
+                <p class="descricao-produto">Ação renovadora e esfoliante suave.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sérum ácido HAC" data-preco="29.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/antioleosidade.PNG" alt="Antioleosidade">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Sérum antioleosidade</p>
+                <p class="descricao-produto">Controle de brilho e oleosidade.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sérum antioleosidade" data-preco="29.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/antioxidante.PNG" alt="Antioxidante">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.8</span>
+                </div>
+                <p class="nome-produto">Sérum antioxidante</p>
+                <p class="descricao-produto">Protege contra radicais livres.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sérum antioxidante" data-preco="29.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/clareador.PNG" alt="Clareador">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.6</span>
+                </div>
+                <p class="nome-produto">Sérum clareador</p>
+                <p class="descricao-produto">Uniformiza o tom da pele.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sérum clareador" data-preco="29.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/firmador.PNG" alt="Firmador">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.7</span>
+                </div>
+                <p class="nome-produto">Sérum firmador</p>
+                <p class="descricao-produto">Promove firmeza e elasticidade.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sérum firmador" data-preco="29.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/hidratanteserum.PNG" alt="Hidratante">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.4</span>
+                </div>
+                <p class="nome-produto">Sérum hidratante</p>
+                <p class="descricao-produto">Hidratação leve e profunda.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sérum hidratante" data-preco="29.90">Comprar</a>
+            </div>
+
+            <!-- Cremes em pote -->
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/energy.PNG" alt="Energy">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.9</span>
+                </div>
+                <p class="nome-produto">Floralis energy </p>
+                <p class="descricao-produto">Skincare hidratante energizante.</p>
+                <p class="preco-produto">R$ 49,90</p>
+                <a href="#" class="btn-comprar" data-nome="Floralis energy skincare" data-preco="49.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/calmante.PNG" alt="Calmante">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Floralis calmante </p>
+                <p class="descricao-produto">Skincare alivia irritações e vermelhidão.</p>
+                <p class="preco-produto">R$ 49,90</p>
+                <a href="#" class="btn-comprar" data-nome="Floralis calmante skincare" data-preco="49.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/hidratante.PNG" alt="Hidratante">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.8</span>
+                </div>
+                <p class="nome-produto">Floralis hidratante</p>
+                <p class="descricao-produto">Hidratação profunda e duradoura skincare.</p>
+                <p class="preco-produto">R$ 49,90</p>
+                <a href="#" class="btn-comprar" data-nome="Floralis hidratante" data-preco="49.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/matificante.PNG" alt="Matificante">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.4</span>
+                </div>
+                <p class="nome-produto">Floralis matificante</p>
+                <p class="descricao-produto">Controla oleosidade da pele skincare.</p>
+                <p class="preco-produto">R$ 49,90</p>
+                <a href="#" class="btn-comprar" data-nome="Floralis matificante" data-preco="49.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/nutritivo.PNG" alt="Nutritivo">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.7</span>
+                </div>
+                <p class="nome-produto">Floralis nutritivo</p>
+                <p class="descricao-produto">Nutre e repara a pele skincare.</p>
+                <p class="preco-produto">R$ 49,90</p>
+                <a href="#" class="btn-comprar" data-nome="Floralis nutritivo" data-preco="49.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/renova.PNG" alt="Renova">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.6</span>
+                </div>
+                <p class="nome-produto">Floralis renova</p>
+                <p class="descricao-produto">Estimula renovação celular skincare.</p>
+                <p class="preco-produto">R$ 49,90</p>
+                <a href="#" class="btn-comprar" data-nome="Floralis renova" data-preco="49.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/revitalizante.PNG" alt="Revitalizante">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Floralis revitalizante</p>
+                <p class="descricao-produto">Pele revitalizada e luminosa skincare.</p>
+                <p class="preco-produto">R$ 49,90</p>
+                <a href="#" class="btn-comprar" data-nome="Floralis revitalizante" data-preco="49.90">Comprar</a>
+            </div>
+
+            <!-- Máscaras em bisnaga -->
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/carvãomascara.PNG" alt="Carvão Ativado">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.2</span>
+                </div>
+                <p class="nome-produto">Máscara carvão</p>
+                <p class="descricao-produto">Remove cravos e impurezas.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Máscara carvão" data-preco="29.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/nutriçãomascara.PNG" alt="Nutrição Máscara">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.6</span>
+                </div>
+                <p class="nome-produto">Máscara nutrição</p>
+                <p class="descricao-produto">Nutrição intensa e reparadora.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Máscara nutrição" data-preco="29.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/mascaracravos.PNG" alt="Regeneração Máscara">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Máscara regeneração</p>
+                <p class="descricao-produto">Ajuda a renovar e suavizar.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Máscara regeneração" data-preco="29.90">Comprar</a>
+            </div>
+
+            <div class="produto skincare">
+                <img src="../assets/css/img/skincare/vitaminacmascara.PNG" alt="Vitamina C Máscara">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.9</span>
+                </div>
+                <p class="nome-produto">Máscara vitamina C</p>
+                <p class="descricao-produto">Ilumina e uniformiza a pele.</p>
+                <p class="preco-produto">R$ 29,90</p>
+                <a href="#" class="btn-comprar" data-nome="Máscara vitamina C" data-preco="29.90">Comprar</a>
+            </div>
+
+            <!-- Maquiagem -->
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/baseliquida.png" alt="Base líquida">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.2</span>
+                </div>
+                <p class="nome-produto">Base líquida</p>
+                <p class="descricao-produto">Cobertura alta e acabamento natural.</p>
+                <p class="preco-produto">R$ 20,90</p>
+                <a href="#" class="btn-comprar" data-nome="Base líquida" data-preco="20.90">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/batom.PNG" alt="Batom">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Batom</p>
+                <p class="descricao-produto">Cor intensa e hidratação cremosa.</p>
+                <p class="preco-produto">R$ 15,90</p>
+                <a href="#" class="btn-comprar" data-nome="Batom" data-preco="15.90">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/blush.PNG" alt="Blush">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Blush</p>
+                <p class="descricao-produto">Toque natural de cor saudável.</p>
+                <p class="preco-produto">R$ 18,50</p>
+                <a href="#" class="btn-comprar" data-nome="Blush" data-preco="18.50">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/contorno.PNG" alt="Contorno">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.1</span>
+                </div>
+                <p class="nome-produto">Contorno</p>
+                <p class="descricao-produto">Define e esculpe o rosto.</p>
+                <p class="preco-produto">R$ 22,00</p>
+                <a href="#" class="btn-comprar" data-nome="Contorno" data-preco="22.00">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/corretivo.PNG" alt="Corretivo">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.4</span>
+                </div>
+                <p class="nome-produto">Corretivo</p>
+                <p class="descricao-produto">Cobre imperfeições e olheiras.</p>
+                <p class="preco-produto">R$ 19,90</p>
+                <a href="#" class="btn-comprar" data-nome="Corretivo" data-preco="19.90">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/deliniador.png" alt="Deliniador">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Deliniador</p>
+                <p class="descricao-produto">Traços precisos e longa duração.</p>
+                <p class="preco-produto">R$ 18,90</p>
+                <a href="#" class="btn-comprar" data-nome="Deliniador" data-preco="18.90">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/demaquilante.png" alt="Demaquilante">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.1</span>
+                </div>
+                <p class="nome-produto">Demaquilante</p>
+                <p class="descricao-produto">Remove maquiagem suavemente.</p>
+                <p class="preco-produto">R$ 25,00</p>
+                <a href="#" class="btn-comprar" data-nome="Demaquilante" data-preco="25.00">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/gloss.PNG" alt="Gloss">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.0</span>
+                </div>
+                <p class="nome-produto">Gloss</p>
+                <p class="descricao-produto">Brilho labial suave e hidratante.</p>
+                <p class="preco-produto">R$ 16,50</p>
+                <a href="#" class="btn-comprar" data-nome="Gloss" data-preco="16.50">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/iluminador.png" alt="Iluminador">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.5</span>
+                </div>
+                <p class="nome-produto">Iluminador</p>
+                <p class="descricao-produto">Realça e ilumina o rosto.</p>
+                <p class="preco-produto">R$ 21,00</p>
+                <a href="#" class="btn-comprar" data-nome="Iluminador" data-preco="21.00">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/lapisdeolho.png" alt="Lápis de olho">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Lápis de olho</p>
+                <p class="descricao-produto">Olhar definido e intenso.</p>
+                <p class="preco-produto">R$ 17,90</p>
+                <a href="#" class="btn-comprar" data-nome="Lápis de olho" data-preco="17.90">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/lapissobrancelha.png" alt="Lápis sobrancelha">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.2</span>
+                </div>
+                <p class="nome-produto">Lápis sobrancelha</p>
+                <p class="descricao-produto">Sobrancelhas naturais e definidas.</p>
+                <p class="preco-produto">R$ 19,00</p>
+                <a href="#" class="btn-comprar" data-nome="Lápis sobrancelha" data-preco="19.00">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/pocompacto.PNG" alt="Pó compacto">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.6</span>
+                </div>
+                <p class="nome-produto">Pó compacto</p>
+                <p class="descricao-produto">Acabamento matte, controla brilho.</p>
+                <p class="preco-produto">R$ 23,90</p>
+                <a href="#" class="btn-comprar" data-nome="Pó compacto" data-preco="23.90">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/prime.png" alt="Prime">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.4</span>
+                </div>
+                <p class="nome-produto">Prime</p>
+                <p class="descricao-produto">Prepara pele para maquiagem perfeita.</p>
+                <p class="preco-produto">R$ 27,00</p>
+                <a href="#" class="btn-comprar" data-nome="Prime" data-preco="27.00">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/rimel.PNG" alt="Rímel">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.7</span>
+                </div>
+                <p class="nome-produto">Rímel</p>
+                <p class="descricao-produto">Cílios alongados, definidos e volumosos.</p>
+                <p class="preco-produto">R$ 21,90</p>
+                <a href="#" class="btn-comprar" data-nome="Rímel" data-preco="21.90">Comprar</a>
+            </div>
+
+            <div class="produto maquiagem">
+                <img src="../assets/css/img/maquiagem/sombra.png" alt="Sombra">
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
+                <p class="nome-produto">Sombra</p>
+                <p class="descricao-produto">Cores versáteis para olhos marcantes.</p>
+                <p class="preco-produto">R$ 24,00</p>
+                <a href="#" class="btn-comprar" data-nome="Sombra" data-preco="24.00">Comprar</a>
+            </div>
+
+            <!-- bodysplash -->
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/aurora.png" alt="Aurora">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.4</span></div>
+                <p class="nome-produto">Bodysplash aurora</p>
+                <p class="descricao-produto">Fragrância fresca e revigorante.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash aurora" data-preco="42.90">Comprar</a>
+            </div>
+
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/aurorasublime.png" alt="Aurora Sublime">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.5</span></div>
+                <p class="nome-produto">Bodysplash sublime</p>
+                <p class="descricao-produto">Doce aroma sofisticado e marcante.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash sublime" data-preco="42.90">Comprar</a>
+            </div>
+
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/brisadeverao.png" alt="Brisa de Verão">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.3</span></div>
+                <p class="nome-produto">Bodysplash brisa</p>
+                <p class="descricao-produto">Aroma leve e refrescante.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash brisa" data-preco="42.90">Comprar</a>
+            </div>
+
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/brume.png" alt="Brume d'Eté">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.2</span></div>
+                <p class="nome-produto">Bodysplash d'Eté</p>
+                <p class="descricao-produto">Essência suave e elegante.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash d'Eté" data-preco="42.90">Comprar</a>
+            </div>
+
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/doceencanto.png" alt="Doce Encanto">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.4</span></div>
+                <p class="nome-produto">Bodysplash d. encanto</p>
+                <p class="descricao-produto">Aroma doce e envolvente.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash d. encanto" data-preco="42.90">Comprar</a>
+            </div>
+
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/eclat.png" alt="Éclat">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.3</span></div>
+                <p class="nome-produto">Bodysplash éclat</p>
+                <p class="descricao-produto">Fragrância sofisticada e marcante.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash éclat" data-preco="42.90">Comprar</a>
+            </div>
+
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/eternaluz.png" alt="Eterna Luz">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.5</span></div>
+                <p class="nome-produto">Bodysplash eterna Luz</p>
+                <p class="descricao-produto">Luz suave e aroma delicado.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash eterna Luz" data-preco="42.90">Comprar</a>
+            </div>
+
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/puraessencia.png" alt="Pura Essência">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.6</span></div>
+                <p class="nome-produto">Bodysplash p. essência</p>
+                <p class="descricao-produto">Essência pura e refrescante.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash p. essência" data-preco="42.90">Comprar</a>
+            </div>
+
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/rose.png" alt="Rose Éternelle">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.5</span></div>
+                <p class="nome-produto">Bodysplash Éternelle</p>
+                <p class="descricao-produto">Aroma floral romântico e delicado.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash Éternelle" data-preco="42.90">Comprar</a>
+            </div>
+
+            <div class="produto bodysplash">
+                <img src="../assets/css/img/bodysplash/velour.png" alt="Velour Vanille">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.4</span></div>
+                <p class="nome-produto">Bodysplash vanille</p>
+                <p class="descricao-produto">Doce baunilha envolvente e suave.</p>
+                <p class="preco-produto">R$ 42,90</p>
+                <a href="#" class="btn-comprar" data-nome="Bodysplash vanille" data-preco="42.90">Comprar</a>
+            </div>
+
+            <!-- kits -->
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/base+corretivo.png" alt="Base + Corretivo">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.9</span></div>
+                <p class="nome-produto">Base e corretivo</p>
+                <p class="descricao-produto">Make impecável:base e corretivo.</p>
+                <p class="preco-produto">R$ 35,90</p>
+                <a href="#" class="btn-comprar" data-nome="Base e corretivo" data-preco="32.90">Comprar</a>
+            </div>
+
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/mascara carvao+vitamina c.png" alt="carvao + vitamina c">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.3</span></div>
+                <p class="nome-produto">Carvão e vitamina c</p>
+                <p class="descricao-produto">Máscara que limpa, iluminada e renovada.</p>
+                <p class="preco-produto">R$ 35,90</p>
+                <a href="#" class="btn-comprar" data-nome="Máscara carvão e vitamina c" data-preco="35.90">Comprar</a>
+            </div>
+
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/mascara regeneracao+nutricao.png" alt="regeneracao + nutricao">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.9</span></div>
+                <p class="nome-produto">Otoro e nutrição</p>
+                <p class="descricao-produto">Máscara que regenera e nutri.</p>
+                <p class="preco-produto">R$ 35,90</p>
+                <a href="#" class="btn-comprar" data-nome="Máscara otoro e nutrição" data-preco="35.90">Comprar</a>
+            </div>
+
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/serum clareador+ gel hidratante.png" alt="clareador + gel hidratante">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.6</span></div>
+                <p class="nome-produto">Sérum e gel hidratante</p>
+                <p class="descricao-produto">Hidratação e clareamento para sua pele.</p>
+                <p class="preco-produto">R$ 49,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sérum e gel hidratante" data-preco="49.90">Comprar</a>
+            </div>
+
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/serum+creme hidratante.png" alt="serum hidratante + creme hidratante">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.1</span></div>
+                <p class="nome-produto">Sérum e creme</p>
+                <p class="descricao-produto">Hidratação profunda para pele revitalizada.</p>
+                <p class="preco-produto">R$ 63,90</p>
+                <a href="#" class="btn-comprar" data-nome="Sérum e creme hidratante" data-preco="63.90">Comprar</a>
+            </div>
+
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/perfume orvalho +creme orvalho+sabonete luz oriente.png"
+                    alt="perfume orvalho + creme + sabonete">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.8</span></div>
+                <p class="nome-produto">Perf., creme e sabonete</p>
+                <p class="descricao-produto">Essência natural para sua rotina diária.</p>
+                <p class="preco-produto">R$ 118,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume, creme e sabonete" data-preco="118.90">Comprar</a>
+            </div>
+
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/perfume azure+creme marinho+sabonete nuvem.png"
+                    alt="perfume azure + creme + sabonete">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.3</span></div>
+                <p class="nome-produto">Perf.,creme e sabonete</p>
+                <p class="descricao-produto">Frescor e conforto em cada toque.</p>
+                <p class="preco-produto">R$ 132,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume,creme e sabonete" data-preco="132.90">Comprar</a>
+            </div>
+
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/perfume erva seca+ sabonete aurea.png"
+                    alt="perfume erva seca +sabonete aurea">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.8</span></div>
+                <p class="nome-produto">Perfume e sabonete</p>
+                <p class="descricao-produto">Elegância e sofisticação em harmonia perfeita.</p>
+                <p class="preco-produto">R$ 101,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume e sabonete" data-preco="101.90">Comprar</a>
+            </div>
+
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/creme aurora+perfume lirio.png" alt="perfume lirio +creme aurora">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.5</span></div>
+                <p class="nome-produto">Perfume e creme</p>
+                <p class="descricao-produto">Delicadeza floral para momentos de paz.</p>
+                <p class="preco-produto">R$ 83,90</p>
+                <a href="#" class="btn-comprar" data-nome="Perfume e creme" data-preco="83.90">Comprar</a>
+            </div>
+
+            <div class="produto kits">
+                <img src="../assets/css/img/kits/creme aurora+sabonete ipe.png" alt="creme auror+ sabonete ipe">
+                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.8</span></div>
+                <p class="nome-produto">Creme e sabonete</p>
+                <p class="descricao-produto">Suavidade floral que inspira equilíbrio.</p>
+                <p class="preco-produto">R$ 63,90</p>
+                <a href="#" class="btn-comprar" data-nome="Creme e sabonete" data-preco="63.90">Comprar</a>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeLogin">&times;</span>
+
+            <div class="tab-buttons">
+                <button class="tab active" data-tab="login">Entrar</button>
+                <button class="tab" data-tab="register">Cadastrar</button>
+            </div>
+
+            <!-- Login -->
+            <form id="loginForm" class="tab-content active" data-content="login">
+                <label for="email">Usuário</label>
+                <input type="text" id="email" name="email" placeholder="Digite seu usuário" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+
+            <!-- Cadastro -->
+            <form id="registerForm" class="tab-content" data-content="register">
+                <label for="nomeCadastro">Nome</label>
+                <input type="text" id="nomeCadastro" name="nomeCadastro" placeholder="Seu nome completo" required>
+
+                <label for="emailCadastro">E-mail</label>
+                <input type="email" id="emailCadastro" name="emailCadastro" placeholder="Digite seu e-mail" required>
+
+                <label for="senhaCadastro">Senha</label>
+                <input type="password" id="senhaCadastro" name="senhaCadastro" placeholder="Crie uma senha" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="buscaOverlay" class="overlay-busca">
+        <div class="busca-container">
+            <form id="formBusca" class="form-busca">
+                <input type="text" id="campoBusca" placeholder="Buscar..." />
+                <button type="submit" class="btn-buscar">🔍</button>
+                <span id="fecharBusca" class="fechar">×</span>
+            </form>
+            <div id="resultadosBusca" class="resultados-busca"></div>
+        </div>
+    </div>
+
+    <div id="carrinho" class="carrinho">0
+        <div class="carrinho-header">
+            <h3>CARRINHO <span id="qtdItens">(0 itens)</span></h3>
+            <span class="fechar-carrinho" onclick="fecharCarrinho()">×</span>
+        </div>
+
+        <div id="listaCarrinho" class="carrinho-itens"></div>
+
+        <!-- RESUMO MELHORADO -->
+        <div class="resumo-carrinho">
+            <div class="linha-carrinho">
+                <span>Subtotal:</span>
+                <span id="subtotal">R$ 0,00</span>
+            </div>
+
+            <div class="linha-carrinho desconto">
+                <label for="cupom">Desconto:</label>
+                <div class="input-group">
+                    <input type="text" id="cupom" placeholder="Insira o código">
+                    <button onclick="aplicarDesconto()">Aplicar</button>
+                </div>
+            </div>
+
+            <div class="linha-carrinho frete">
+                <label for="cep">Frete:</label>
+                <div class="input-group">
+                    <input type="text" id="cep" placeholder="Insira o CEP">
+                    <button onclick="calcularFrete()">Estimar</button>
+                </div>
+            </div>
+
+            <div class="linha-carrinho total">
+                <strong>Total:</strong>
+                <strong id="total">R$ 0,00</strong>
+            </div>
+
+
+            <button class="btn-finalizar" onclick="finalizarPedido()">FINALIZAR PEDIDO</button>
+        </div>
+    </div>
+
+    <section class="historia sobre-nos">
+        <div class="sobre-grid">
+            <!-- Imagem -->
+            <div class="sobre-img">
+                <img src="../assets/css/img/Equipe Beleza Rara no Armazém.png" alt="Funcionários">
+            </div>
+
+            <!-- Texto -->
+            <div class="sobre-text">
+                <p> A Beleza Rara Cosméticos, uma marca que se tornou sinônimo de inovação e qualidade no mercado da
+                    beleza, iniciou sua jornada em 1998 na charmosa cidade de Guarapuava, no interior do Paraná. O que
+                    começou como um modesto centro de distribuição de cosméticos terceirizados, impulsionado pela visão
+                    e paixão de seus fundadores, rapidamente evoluiu.
+
+                    Percebendo a crescente demanda por produtos que realmente fizessem a diferença e o desejo de ter
+                    controle total sobre a qualidade e a identidade de suas ofertas, os fundadores deram um passo
+                    audacioso. Alguns anos após a sua fundação, a Beleza Rara inaugurou sua fábrica própria. Este
+                    movimento estratégico não apenas garantiu a inovação contínua e a excelência em cada formulação, mas
+                    também solidificou a identidade única da marca no mercado. Cada produto, desde então, carrega a
+                    essência e o compromisso da Beleza Rara com a beleza e o bem-estar.
+
+                    Com o passar dos anos, o reconhecimento e a demanda pelos produtos da Beleza Rara cresceram
+                    exponencialmente, exigindo uma expansão logística. Para atender com maior agilidade e eficiência a
+                    um mercado nacional cada vez mais ávido por seus cosméticos, a marca inaugurou um novo e ampliado
+                    Centro de Distribuição em Palmas, Tocantins. A escolha da capital tocantinense foi estratégica, dada
+                    a sua localização central e privilegiada no mapa brasileiro, permitindo que a Beleza Rara alcançasse
+                    clientes em todas as regiões do país com uma velocidade sem precedentes.
+
+                    Hoje, a Beleza Rara Cosméticos orgulha-se de uma operação que une a expertise de produção em
+                    Guarapuava com a eficiência da distribuição nacional a partir de Palmas. Essa sinergia garante que a
+                    marca esteja sempre um passo à frente, levando não apenas produtos, mas também autoestima e
+                    bem-estar para milhões de brasileiros. Com os olhos fixos no futuro, a Beleza Rara segue firme em
+                    sua missão de embelezar o Brasil e, em breve, alçar voos mais altos, levando a sua rara beleza para
+                    o mundo. A trajetória da Beleza Rara é um testemunho de empreendedorismo, paixão e um compromisso
+                    inabalável com a qualidade e a satisfação de seus consumidores.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="localizacao">
+        <div class="locais">
+
+            <!-- CD 1  -->
+            <div class="cd">
+                <img src="../assets/css/img/Localização da Empresa.png" alt="Mapa">
+            </div>
+
+            <div class="cd">
+                <h3>Centro de Distribuição Palmas</h3>
+                <p><strong>Endereço:</strong>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Distrito+Industrial,+Palmas,+TO"
+                        target="_blank" rel="noopener noreferrer">
+                        Distrito Industrial (Tocantins II)
+                    </a>
+                    Palmas-TO, CEP: 77065-000
+                </p>
+
+                <p><strong>Contato:</strong></p>
+                <p>
+                    📞 (63) 3215-0000<br>
+                    📱 (63) 98456-7890
+                </p>
+
+                <p>📧 <a href="mailto:contato@belezarara.com.br">contato@belezarara.com.br</a></p>
+
+                <p><strong>Atendimento:</strong><br>
+                    Para informações sobre horários de funcionamento ou agendamentos, entre em contato através dos
+                    canais acima.
+                </p>
+            </div>
+
+            <!-- CD 2  -->
+            <div class="cd">
+                <h3>Centro de Distribuição Guarapuava</h3>
+                <p><strong>Endereço:</strong>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Miguel+Losso,+Lote+42,+Distrito+Industrial+de+Guarapuava,+Guarapuava-PR,+CEP+85010-210"
+                        target="_blank" rel="noopener noreferrer">
+                        Rua Miguel Losso, Lote 42 Distrito Industrial de Guarapuava
+                    </a>
+                    Guarapuava-PR, CEP: 85010-210
+                </p>
+
+                <p><strong>Contato:</strong></p>
+                <p>
+                    📞(42) 4619-0000<br>
+                    📱 (42) 3555-4444
+                </p>
+
+                <p>📧 <a href="mailto:cosmeticos@belezarara.com.br">cosmeticos@belezarara.com.br</a></p>
+
+                <p><strong>Atendimento:</strong><br>
+                    Para informações sobre horários de funcionamento ou agendamentos, entre em contato através dos
+                    canais acima.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="apoios">
+        <div class="logos-apoio">
+            <!-- Exemplo de logos de empresas parceiras -->
+            <div class="logo-item">
+                <img src="../assets/css/img/loreal.png" alt="Loreal Paris">
+            </div>
+            <div class="logo-item">
+                <img src="../assets/css/img/inovar.png" alt="inovar">
+            </div>
+            <div class="logo-item">
+                <img src="../assets/css/img/renner.png" alt="Renner">
+            </div>
+            <div class="logo-item">
+                <img src="../assets/css/img/Beauty Fair.png" alt="Beauty Fair">
+            </div>
+        </div>
+    </div>
+
+    <section class="politicas ">
+        <div class="politica-container">
+            <p class="politica-intro">
+                Prezamos pela transparência e queremos que sua experiência em nossa loja seja leve, segura e
+                encantadora.
+                Confira abaixo nossas políticas de privacidade, trocas, devoluções e envio.
+            </p>
+
+            <div class="politica-card">
+                <h3>1. Privacidade</h3>
+                <p>
+                    Seus dados são tratados com total segurança e confidencialidade. Utilizamos suas informações apenas
+                    para processar pedidos, melhorar sua experiência de navegação e enviar promoções personalizadas.
+                    Não compartilhamos, vendemos ou divulgamos seus dados pessoais a terceiros sem sua autorização,
+                    exceto quando necessário para a entrega dos produtos ou por exigência legal.
+                    Adotamos tecnologias seguras de proteção de dados, como criptografia e servidores certificados, para
+                    garantir que suas informações estejam sempre protegidas.
+                    A Beleza Rara segue rigorosamente a Lei Geral de Proteção de Dados (LGPD) e respeita sua privacidade
+                    em todas as etapas da sua jornada conosco.
+                    Você pode, a qualquer momento, solicitar a atualização ou exclusão dos seus dados pessoais.
+                    Nosso compromisso é oferecer uma experiência segura, transparente e ética para todos os nossos
+                    clientes.
+                </p>
+            </div>
+
+            <div class="politica-card">
+                <h3>2. Trocas & Devoluções</h3>
+                <ul>
+                    <li>Você tem <strong>7 dias corridos</strong>após o recebimento
+                        para solicitar troca ou devolução de qualquer produto, conforme o Código de Defesa do
+                        Consumidor..
+                    </li>
+
+                    <li>Para que a solicitação seja aceita, o item deve estar lacrado, sem sinais de uso e em perfeitas
+                        condições, com a embalagem original preservada.
+                    </li>
+
+                    <li>
+                        Caso tenha recebido um produto diferente do pedido ou com defeito, faremos a substituição sem
+                        custos adicionais.
+                    </li>
+
+                    <li>Nosso time está à disposição pelo e-mail <a
+                            href="mailto:suporte@belezarara.com">suporte@belezarara.com</a>.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="politica-card">
+                <h3>3. Envio</h3>
+                <p>
+                    O valor do frete é calculado automaticamente no momento da finalização da compra, de acordo com o
+                    CEP e a região de entrega informada. Os prazos variam conforme a localidade e são exibidos antes da
+                    confirmação do pedido. Trabalhamos com transportadoras confiáveis para garantir a segurança e a
+                    agilidade no envio dos produtos. Você receberá atualizações por e-mail e poderá acompanhar o
+                    andamento da entrega. Nosso compromisso é realizar entregas rápidas, seguras e dentro do prazo
+                    previsto.
+                </p>
+            </div>
+
+            <div class="politica-card">
+                <h3>4. Garantia</h3>
+                <p>
+                    Todos os produtos comercializados pela Beleza Rara são originais, adquiridos diretamente de marcas
+                    confiáveis e com garantia de procedência. Prezamos pela qualidade e autenticidade em cada item
+                    oferecido. Caso você identifique qualquer defeito de fabricação, entre em contato imediatamente com
+                    nosso time de atendimento para que possamos avaliar e realizar a troca ou reembolso conforme
+                    necessário. Nossa prioridade é garantir que você receba um produto em perfeito estado. A satisfação
+                    e a confiança dos nossos clientes são fundamentais para nós.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projetos" id="projetos">
+        <div class="container-projetos">
+            <p class="descricao-projeto">
+                Com o objetivo de melhorar a eficiência logística, reduzir o lead time e proporcionar uma melhor
+                experiência aos clientes, a empresa Beleza Rara Cosméticos desenvolveu um projeto completo de expansão.
+                A iniciativa visa a implantação de um novo Centro de Distribuição ou uma Fábrica com CD em uma região
+                estratégica do Brasil.
+            </p>
+
+            <div class="projeto-etapas">
+                <h3>ETAPAS DO PROJETO</h3>
+                <ul>
+                    <li> -Levantamento e plano de ação inicial com quadro Kanban;</li>
+                    <li> -Escolha da nova localização com análise estratégica;</li>
+                    <li> -Desenvolvimento de layout 3D do CD/Fábrica;</li>
+                    <li> -Estrutura necessária: física, tecnológica e operacional;</li>
+                    <li> -Documentação legal nacional e internacional;</li>
+                    <li> -Criação da logomarca e identidade organizacional;</li>
+                    <li> -Estimativa de investimento e análise SWOT;</li>
+                    <li> -Produção audiovisual e site institucional.</li>
+                </ul>
+            </div>
+
+            <div class="projeto-imgs">
+                <h3>VISUALIZAÇÃO DO PROJETO</h3>
+                <div class="galeria-projeto">
+                    <img src="../assets/css/img/layout-cd.jpg" alt="Layout do CD" />
+                    <img src="../assets/css/img/planta-industrial.jpg" alt="Planta da fábrica" />
+                    <img src="../assets/css/img/kanban.jpg" alt="Quadro Kanban do projeto" />
+                </div>
+            </div>
+
+            <div class="projeto-missao">
+                <h3>MISSÃO, VISÃO E VALORES</h3>
+
+                <p><strong>Missão:</strong> Levar beleza, bem-estar e inovação aos nossos clientes por meio de produtos
+                    de alta qualidade e uma logística eficiente.</p>
+
+                <p><strong>Visão:</strong> Ser referência nacional e internacional em logística cosmética, expandindo
+                    para as Américas até 2030.</p>
+
+                <div class="valores">
+                    <strong>Valores:</strong>
+                    <ul>
+                        <li>🌱 <strong>Sustentabilidade:</strong> Frascos de vidro reciclado e embalagens com elementos
+                            naturais, como folhas, para minimizar o impacto ambiental.</li>
+                        <li>📖 <strong>Transparência:</strong> Informações claras e acessíveis em embalagens e rótulos,
+                            garantindo que você saiba exatamente o que está usando.</li>
+                        <li>🤝 <strong>Inclusividade:</strong> Representação de diferentes tons de pele e estilos,
+                            celebrando a diversidade e a beleza em todas as suas formas.</li>
+                        <li>🐇 <strong>Cruelty-Free:</strong> Produtos livres de testes em animais, certificados com
+                            selo verde e ícones de coelho estilizado.</li>
+                        <li>✅ <strong>Qualidade:</strong> Compromisso com excelência em cada etapa da produção e
+                            distribuição.</li>
+                        <li>🚀 <strong>Inovação:</strong> Constante busca por soluções criativas, tecnológicas e
+                            sustentáveis para surpreender o mercado.</li>
+                        <li>🤝 <strong>Comprometimento:</strong> Dedicação com nossos clientes, parceiros e com o
+                            planeta.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        let descontoAplicado = 0;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginModal = document.getElementById('loginModal');
+            const openLoginBtn = document.querySelector('.account');
+            const closeLoginBtn = document.getElementById('closeLogin');
+            const usuarioTexto = document.getElementById('usuarioTexto');
+
+            console.log("Login JS iniciado");
+
+            // 🟡 Recupera o nome do localStorage (caso já tenha sido salvo antes)
+            const nomeSalvo = localStorage.getItem('usuario');
+            if (nomeSalvo) {
+                usuarioTexto.innerText = nomeSalvo;
+                console.log("Nome recuperado do localStorage:", nomeSalvo);
+            }
+
+
+            openLoginBtn.addEventListener('click', () => {
+                console.log("Abrindo modal de login");
+                loginModal.style.display = 'block';
+            });
+
+            closeLoginBtn.addEventListener('click', () => {
+                loginModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === loginModal) {
+                    loginModal.style.display = 'none';
+                }
+            });
+
+            document.getElementById('loginForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const nome = document.getElementById('email').value;
+
+                console.log("Nome digitado:", nome);
+
+                // 🟢 Atualiza o texto e salva no localStorage
+                usuarioTexto.innerText = nome;
+                localStorage.setItem('usuario', nome);
+
+                loginModal.style.display = 'none';
+
+                alert('Login realizado com sucesso!');
+            });
+        });
+
+        // Abertura e fechamento do overlay de busca
+        const iconeBusca = document.getElementById('iconeBusca');
+        const overlay = document.getElementById('buscaOverlay');
+        const fechar = document.getElementById('fecharBusca');
+        const campoBusca = document.getElementById('campoBusca');
+
+        iconeBusca.addEventListener('click', () => {
+            overlay.style.display = 'flex';
+            campoBusca.focus();
+        });
+
+        fechar.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                overlay.style.display = 'none';
+            }
+        });
+
+        const resultadosContainer = document.getElementById('resultadosBusca');
+
+        // Exemplo de produtos (você pode importar isso de um JSON depois)
+        const produtos = [
+            { nome: 'Perfume Elegante', descricao: 'Fragrância marcante e duradoura' },
+            { nome: 'Kit Skincare', descricao: 'Limpeza, tônico e hidratação' },
+            { nome: 'Maquiagem Glam', descricao: 'Paleta de sombras brilhante' },
+            { nome: 'Sabonete Natural', descricao: 'Com extratos vegetais' },
+            { nome: 'Creme Hidratante', descricao: 'Pele macia e sedosa' }
+        ];
+
+        document.getElementById('formBusca').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const termo = campoBusca.value.toLowerCase();
+            const resultadosContainer = document.getElementById('resultadosBusca');
+
+            // Pega todos os produtos da página
+            const todosProdutos = document.querySelectorAll('.produto');
+
+            console.log('Produtos encontrados:', todosProdutos.length);
+
+            resultadosContainer.innerHTML = ''; // Limpa resultados anteriores
+
+            let encontrou = false;
+
+            todosProdutos.forEach(produto => {
+                const nome = produto.querySelector('.nome-produto').innerText.toLowerCase();
+                const descricao = produto.querySelector('.descricao-produto').innerText.toLowerCase();
+
+                if (nome.includes(termo) || descricao.includes(termo)) {
+                    encontrou = true;
+                    const clone = produto.cloneNode(true); // Clona o produto para mostrar na área de resultados
+                    resultadosContainer.appendChild(clone);
+                }
+            });
+
+            if (!encontrou) {
+                resultadosContainer.innerHTML = '<p>Nenhum produto encontrado.</p>';
+            }
+        });
+
+        let carrinho = [];
+
+        function abrirCarrinho() {
+            document.getElementById("carrinho").classList.add("aberto");
+            atualizarCarrinho();
+        }
+
+        function fecharCarrinho() {
+            document.getElementById("carrinho").classList.remove("aberto");
+        }
+
+        // Quando clicar em COMPRAR
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("btn-comprar")) {
+                e.preventDefault();
+                const nome = e.target.dataset.nome;
+                const preco = parseFloat(e.target.dataset.preco);
+                const img = e.target.closest(".produto").querySelector("img").src;
+
+                adicionarAoCarrinho(nome, preco, img);
+                abrirCarrinho();
+            }
+        });
+
+        function adicionarAoCarrinho(nome, preco, imagem) {
+            const existente = carrinho.find(item => item.nome === nome);
+            if (existente) {
+                existente.qtd += 1;
+            } else {
+                carrinho.push({ nome, preco, qtd: 1, imagem });
+            }
+            atualizarCarrinho();
+        }
+
+        function atualizarCarrinho() {
+            const lista = document.getElementById("listaCarrinho");
+            lista.innerHTML = "";
+            let subtotal = 0;
+            let qtdTotal = 0;
+
+            carrinho.forEach((item, i) => {
+                subtotal += item.preco * item.qtd;
+                qtdTotal += item.qtd;
+
+                lista.innerHTML += `
+        <div class="item">
+          <img src="${item.imagem}" alt="${item.nome}">
+          <div class="item-info">
+            <p><strong>${item.nome}</strong></p>
+            <div class="qtd-controls">
+              <button onclick="mudarQtd(${i}, -1)">−</button>
+              <span>${item.qtd}</span>
+              <button onclick="mudarQtd(${i}, 1)">+</button>
+            </div>
+            <p>R$ ${(item.preco * item.qtd).toFixed(2)}</p>
+          </div>
+        </div>
+      `;
+            });
+
+            document.getElementById("subtotal").textContent = `R$ ${subtotal.toFixed(2)}`;
+            document.getElementById("total").textContent = `R$ ${subtotal.toFixed(2)}`;
+            document.getElementById("qtdItens").textContent = `(${qtdTotal} item${qtdTotal > 1 ? "s" : ""})`;
+        }
+
+        function mudarQtd(index, delta) {
+            carrinho[index].qtd += delta;
+            if (carrinho[index].qtd <= 0) carrinho.splice(index, 1);
+            atualizarCarrinho();
+        }
+
+        // Alternar entre Login e Cadastro
+        const tabs = document.querySelectorAll(".tab");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                // remove 'active' de tudo
+                tabs.forEach(t => t.classList.remove("active"));
+                contents.forEach(c => c.classList.remove("active"));
+
+                // ativa tab clicada
+                tab.classList.add("active");
+                document.querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`).classList.add("active");
+            });
+        });
+
+        // Formulário de Cadastro
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nome = document.getElementById('nomeCadastro').value;
+            const email = document.getElementById('emailCadastro').value;
+            const senha = document.getElementById('senhaCadastro').value;
+
+            // Aqui você pode salvar no localStorage ou enviar para backend futuramente
+            alert(`Cadastro realizado com sucesso!\nBem-vindo(a), ${nome}.`);
+
+            localStorage.setItem('usuario', nome);
+            usuarioTexto.innerText = nome;
+
+            loginModal.style.display = 'none';
+        });
+
+        const iconeCarrinho = document.getElementById("iconeCarrinho");
+        if (iconeCarrinho) {
+            iconeCarrinho.addEventListener("click", () => {
+                abrirCarrinho();
+            });
+        }
+
+        // Seletores
+        const inputCEP = document.querySelector("#cep");
+        const btnEstimar = document.querySelector("#btnEstimar");
+        const subtotalEl = document.querySelector("#subtotal");
+        const freteEl = document.querySelector("#frete");
+        const totalEl = document.querySelector("#total");
+
+        const nomesCategorias = {
+            todos: "Todos os produtos",
+            perfume: "Todos os perfumes",
+            maquiagem: "Todas as maquiagens",
+            cremes: "Todos os cremes",
+            skincare: "Todos de skincare",
+            sabonete: "Todos os sabonetes",
+            kits: "Todos os kits",
+            historia: "Nossa História",
+            localizacao: "Localização",
+            apoios: "Apoios",
+            politicas: "Políticas",
+            projetos: "Projeto"
+        };
+
+        function filtrarProdutos(categoria) {
+            const produtos = document.querySelectorAll('.produto');
+            const secoes = {
+                historia: document.querySelector('.historia'),
+                localizacao: document.querySelector('.localizacao'),
+                apoios: document.querySelector('.apoios'),
+                politicas: document.querySelector('.politicas'),
+                projetos: document.querySelector('.projetos')
+            };
+
+            // Primeiro, escondemos todos os produtos e seções
+            produtos.forEach(p => p.style.display = 'none');
+            Object.values(secoes).forEach(sec => {
+                if (sec) sec.style.display = 'none';
+            });
+
+            // Atualiza o título da categoria
+            const tituloCategoria = document.getElementById('titulo-categoria');
+            if (nomesCategorias[categoria]) {
+                tituloCategoria.textContent = nomesCategorias[categoria];
+            } else {
+                tituloCategoria.textContent = '';
+            }
+
+            if (categoria === 'todos') {
+                // Mostra todos os produtos e as seções de história e localização (se quiser)
+                produtos.forEach(p => p.style.display = 'block');
+                if (secoes.historia) secoes.historia.style.display = 'block';
+                if (secoes.localizacao) secoes.localizacao.style.display = 'block';
+            } else if (categoria in secoes) {
+                // Mostra apenas a seção correspondente (historia, localizacao, apoios, politicas, projetos)
+                if (secoes[categoria]) secoes[categoria].style.display = 'block';
+            } else {
+                // Mostra apenas os produtos da categoria
+                const produtosFiltrados = document.querySelectorAll(`.produto.${categoria}`);
+                produtosFiltrados.forEach(p => p.style.display = 'block');
+            }
+
+            const banner = document.getElementById("banner");
+            if (banner) {
+                if (categoria === "todos") {
+                    banner.style.display = "block"; // mostra só em "todos"
+                } else {
+                    banner.style.display = "none";  // esconde nas outras abas
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
