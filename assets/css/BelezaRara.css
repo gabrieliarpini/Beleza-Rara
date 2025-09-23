@@ -3,7 +3,7 @@ body {
   /* Remove a margem padrão do navegador em volta da página */
   font-family: Arial, Helvetica, sans-serif;
   /* Define Arial como fonte principal, com fallback para fonte sem serifa */
-  
+
 }
 
 .top-bar {
@@ -148,32 +148,38 @@ nav ul li:hover {
   /* Espaçamento interno de 40px por todos os lados */
   text-align: center;
   /* Centraliza o texto dentro da seção */
+  
 
 }
 
 .produtos-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  /* Exatamente 5 colunas */
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 produtos por linha */
   gap: 20px;
-
 }
 
 .produto {
-  position: relative;
-  /* Permite posicionar elementos dentro dele de forma absoluta */
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* imagem e botão centralizados */
+  padding: 12px;
   border: 1px solid #eee;
-  /* Borda leve de 1px */
-  padding: 15px;
-  /* Padding interno de 15px */
-  border-radius: 10px;
-  /* Bordas arredondadas de 10px */
+  border-radius: 8px;
   background: #fff;
-  /* Fundo branco */
+  box-sizing: border-box;
   transition: transform 0.2s;
-  /* Suaviza transformações (como hover) */
 
+}
 
+.produto .selo-avaliacao,
+.produto .nome-produto,
+.produto .descricao-produto,
+.produto .preco-produto {
+  width: 100%;
+  /* ocupa toda a largura do card */
+  text-align: left;
+  /* alinha o conteúdo à esquerda */
 }
 
 .produto:hover {
@@ -979,7 +985,7 @@ nav button:focus {
 }
 
 .politica-card a {
-  color: #6a3ba0;
+  color: #1D074D;
   font-weight: 600;
   text-decoration: none;
 }
@@ -1085,4 +1091,49 @@ nav button:focus {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.carousel-images {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+  gap: 50px;
+  padding-left: 23px;
+  display: flex;
+}
+
+.carousel-images img {
+  max-width: 100%;
+  height: auto;
+  width: 150px;
+}
+
+.carousel button.prev,
+.carousel button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel button.prev {
+  left: 5px;
+}
+
+.carousel button.next {
+  right: 5px;
 }
