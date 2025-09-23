@@ -148,8 +148,6 @@ nav ul li:hover {
   /* Espaçamento interno de 40px por todos os lados */
   text-align: center;
   /* Centraliza o texto dentro da seção */
-  
-
 }
 
 .produtos-grid {
@@ -169,6 +167,7 @@ nav ul li:hover {
   background: #fff;
   box-sizing: border-box;
   transition: transform 0.2s;
+  
 
 }
 
@@ -180,6 +179,7 @@ nav ul li:hover {
   /* ocupa toda a largura do card */
   text-align: left;
   /* alinha o conteúdo à esquerda */
+
 }
 
 .produto:hover {
@@ -1099,6 +1099,7 @@ nav button:focus {
   max-width: 200px;
   overflow: hidden;
   margin-bottom: 10px;
+  margin-left: 55px;
 }
 
 .carousel-images {
@@ -1108,6 +1109,7 @@ nav button:focus {
   gap: 50px;
   padding-left: 23px;
   display: flex;
+  
 }
 
 .carousel-images img {
