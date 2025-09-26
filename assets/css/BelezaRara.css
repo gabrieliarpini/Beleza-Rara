@@ -719,6 +719,16 @@ nav button:focus {
   overflow: hidden;
 }
 
+
+
+.cd-mapa img {
+  max-width: 1300px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 .cd h3 {
   font-size: 22px;
   font-weight: 600;
@@ -727,9 +737,6 @@ nav button:focus {
 }
 
 .cd img {
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
   transition: transform 0.4s ease;
   width: 100%;
   height: auto;
