@@ -52,10 +52,7 @@ body {
 
 .logo {
   font-size: 21px;
-  /* Tamanho da fonte de 20px */
   flex-shrink: 0;
-  /* Impede que o logo encolha em flex containers */
-
 }
 
 nav ul {
