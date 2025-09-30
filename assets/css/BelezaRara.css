@@ -1,9 +1,7 @@
 body {
   margin: 0;
-  /* Remove a margem padrão do navegador em volta da página */
   font-family: Arial, Helvetica, sans-serif;
-  /* Define Arial como fonte principal, com fallback para fonte sem serifa */
-
+  padding: 0;
 }
 
 .top-bar {
@@ -28,13 +26,14 @@ body {
   background-color: #1D074D;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 0rem;
   font-size: 0rem;
   font-weight: bold;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
+  margin: 0;
 }
 
 .banner img {
@@ -47,12 +46,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding-left: 0;
 }
 
 .logo {
   font-size: 21px;
   flex-shrink: 0;
+  justify-content: flex-start;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icons img {
+  width: 30px;
+  height: auto;
 }
 
 nav ul {
@@ -93,6 +107,8 @@ nav ul li:hover {
   padding: 0;
   margin: 0;
   position: relative;
+  display: flex;
+  justify-content: center; 
 }
 
 .nav-bar ul {
@@ -112,7 +128,8 @@ nav ul li:hover {
   display: none;
 }
 
-.nav-bar li, .nav-bar button {
+.nav-bar li,
+.nav-bar button {
   flex: 0 0 auto;
   white-space: nowrap;
   margin: 0 8px 0 0;
@@ -126,7 +143,10 @@ nav ul li:hover {
   transition: background 0.2s, color 0.2s;
 }
 
-.nav-bar li:hover, .nav-bar button:hover, .nav-bar li:focus, .nav-bar button:focus {
+.nav-bar li:hover,
+.nav-bar button:hover,
+.nav-bar li:focus,
+.nav-bar button:focus {
   background: #f2f2f2;
   color: #1D074D;
   outline: none;
@@ -137,7 +157,9 @@ nav ul li:hover {
     font-size: 14px;
     padding-left: 4px;
   }
-  .nav-bar li, .nav-bar button {
+
+  .nav-bar li,
+  .nav-bar button {
     padding: 10px 14px;
     font-size: 14px;
   }
@@ -148,7 +170,9 @@ nav ul li:hover {
     font-size: 13px;
     padding-left: 2px;
   }
-  .nav-bar li, .nav-bar button {
+
+  .nav-bar li,
+  .nav-bar button {
     padding: 8px 10px;
     font-size: 13px;
     margin-right: 4px;
@@ -160,6 +184,7 @@ nav ul li:hover {
   /* Espaçamento interno de 40px por todos os lados */
   text-align: center;
   /* Centraliza o texto dentro da seção */
+  padding: 0%;
 }
 
 .produtos-grid {
@@ -167,19 +192,21 @@ nav ul li:hover {
   grid-template-columns: repeat(5, 1fr);
   /* 5 produtos por linha */
   gap: 20px;
+  
 }
 
 .produto {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* imagem e botão centralizados */
+  align-items: center;
+  /* imagem e botão centralizados */
   padding: 12px;
   border: 1px solid #eee;
   border-radius: 8px;
   background: #fff;
   box-sizing: border-box;
   transition: transform 0.2s;
-  
+
 
 }
 
@@ -1128,7 +1155,7 @@ nav button:focus {
   gap: 50px;
   padding-left: 23px;
   display: flex;
-  
+
 }
 
 .carousel-images img {
@@ -1188,7 +1215,8 @@ nav button:focus {
   display: none;
 }
 
-.nav-bar li, .nav-bar button {
+.nav-bar li,
+.nav-bar button {
   flex: 0 0 auto;
   white-space: nowrap;
   margin: 0 8px 0 0;
@@ -1202,7 +1230,10 @@ nav button:focus {
   transition: background 0.2s, color 0.2s;
 }
 
-.nav-bar li:hover, .nav-bar button:hover, .nav-bar li:focus, .nav-bar button:focus {
+.nav-bar li:hover,
+.nav-bar button:hover,
+.nav-bar li:focus,
+.nav-bar button:focus {
   background: #f2f2f2;
   color: #1D074D;
   outline: none;
@@ -1213,7 +1244,9 @@ nav button:focus {
     font-size: 14px;
     padding-left: 4px;
   }
-  .nav-bar li, .nav-bar button {
+
+  .nav-bar li,
+  .nav-bar button {
     padding: 10px 14px;
     font-size: 14px;
   }
@@ -1224,7 +1257,9 @@ nav button:focus {
     font-size: 13px;
     padding-left: 2px;
   }
-  .nav-bar li, .nav-bar button {
+
+  .nav-bar li,
+  .nav-bar button {
     padding: 8px 10px;
     font-size: 13px;
     margin-right: 4px;
@@ -1237,42 +1272,52 @@ nav button:focus {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
+
   .produto {
     padding: 8px;
   }
+
   .produto img {
     width: 90px;
     height: 100px;
   }
+
   .btn-comprar {
     padding: 8px 10px;
     font-size: 11px;
   }
+
   .titulo-categoria {
     font-size: 18px;
     margin: 15px 0;
   }
+
   .banner img {
     height: 120px;
   }
+
   .carrinho {
     width: 100vw;
     max-width: 100vw;
     padding: 5px;
   }
+
   .modal-content {
     padding: 10px;
     margin: 10% auto;
   }
+
   .busca-container {
     padding: 10px 5px;
     width: 95vw;
     max-width: 95vw;
   }
+
   .sobre-img img {
     max-width: 90vw;
     margin-left: 0;
   }
+
   .sobre-text p {
     margin-right: 0;
     font-size: 13px;
