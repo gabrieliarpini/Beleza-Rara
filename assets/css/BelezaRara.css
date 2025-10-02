@@ -1040,79 +1040,6 @@ nav button:focus {
   text-decoration: underline;
 }
 
-.projetos {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.container-projetos {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.titulo-projeto {
-  text-align: center;
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.descricao-projeto {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 40px;
-  line-height: 1.6;
-}
-
-.projeto-etapas h3,
-.projeto-imgs h3,
-.projeto-missao h3 {
-  font-size: 1.6rem;
-  color: #1D074D;
-  margin-bottom: 15px;
-}
-
-.projeto-etapas ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 40px;
-}
-
-.projeto-etapas li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-  font-size: 1rem;
-  color: #333;
-}
-
-.projeto-imgs {
-  margin-bottom: 40px;
-}
-
-.galeria-projeto {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.galeria-projeto img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.projeto-missao p {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.5;
-}
 
 .modal-content {
   max-width: 90vw;
@@ -1206,9 +1133,18 @@ nav button:focus {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   padding: 0 0 0 8px;
-  margin: 0;
-  list-style: none;
-  width: 100%;
+  margin: 0 auto;
+  width: fit-content;
+  justify-content: center;
+}
+
+/* Em telas pequenas, volta para largura 100% e scroll ativo */
+@media (max-width: 600px) {
+  .nav-bar ul {
+    width: 100%;
+    padding-left: 8px;
+    justify-content: flex-start; /* para scroll funcionar direito */
+  }
 }
 
 .nav-bar ul::-webkit-scrollbar {

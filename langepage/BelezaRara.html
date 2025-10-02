@@ -52,7 +52,6 @@
                 <button type="button" onclick="filtrarProdutos('localizacao')">LOCALIZAÇÃO</button>
                 <button type="button" onclick="filtrarProdutos('apoios')">APOIOS</button>
                 <button type="button" onclick="filtrarProdutos('politicas')">POLÍTICAS</button>
-                <button type="button" onclick="filtrarProdutos('projetos')">PROJETO</button>
             </ul>
         </nav>
 
@@ -1517,71 +1516,6 @@
         </div>
     </section>
 
-    <section class="projetos" id="projetos">
-        <div class="container-projetos">
-            <p class="descricao-projeto">
-                Com o objetivo de melhorar a eficiência logística, reduzir o lead time e proporcionar uma melhor
-                experiência aos clientes, a empresa Beleza Rara Cosméticos desenvolveu um projeto completo de expansão.
-                A iniciativa visa a implantação de um novo Centro de Distribuição ou uma Fábrica com CD em uma região
-                estratégica do Brasil.
-            </p>
-
-            <div class="projeto-etapas">
-                <h3>ETAPAS DO PROJETO</h3>
-                <ul>
-                    <li> -Levantamento e plano de ação inicial com quadro Kanban;</li>
-                    <li> -Escolha da nova localização com análise estratégica;</li>
-                    <li> -Desenvolvimento de layout 3D do CD/Fábrica;</li>
-                    <li> -Estrutura necessária: física, tecnológica e operacional;</li>
-                    <li> -Documentação legal nacional e internacional;</li>
-                    <li> -Criação da logomarca e identidade organizacional;</li>
-                    <li> -Estimativa de investimento e análise SWOT;</li>
-                    <li> -Produção audiovisual e site institucional.</li>
-                </ul>
-            </div>
-
-            <div class="projeto-imgs">
-                <h3>VISUALIZAÇÃO DO PROJETO</h3>
-                <div class="galeria-projeto">
-                    <img src="../assets/css/img/layout-cd.jpg" alt="Layout do CD" />
-                    <img src="../assets/css/img/planta-industrial.jpg" alt="Planta da fábrica" />
-                    <img src="../assets/css/img/kanban.jpg" alt="Quadro Kanban do projeto" />
-                </div>
-            </div>
-
-            <div class="projeto-missao">
-                <h3>MISSÃO, VISÃO E VALORES</h3>
-
-                <p><strong>Missão:</strong> Levar beleza, bem-estar e inovação aos nossos clientes por meio de produtos
-                    de alta qualidade e uma logística eficiente.</p>
-
-                <p><strong>Visão:</strong> Ser referência nacional e internacional em logística cosmética, expandindo
-                    para as Américas até 2030.</p>
-
-                <div class="valores">
-                    <strong>Valores:</strong>
-                    <ul>
-                        <li>🌱 <strong>Sustentabilidade:</strong> Frascos de vidro reciclado e embalagens com elementos
-                            naturais, como folhas, para minimizar o impacto ambiental.</li>
-                        <li>📖 <strong>Transparência:</strong> Informações claras e acessíveis em embalagens e rótulos,
-                            garantindo que você saiba exatamente o que está usando.</li>
-                        <li>🤝 <strong>Inclusividade:</strong> Representação de diferentes tons de pele e estilos,
-                            celebrando a diversidade e a beleza em todas as suas formas.</li>
-                        <li>🐇 <strong>Cruelty-Free:</strong> Produtos livres de testes em animais, certificados com
-                            selo verde e ícones de coelho estilizado.</li>
-                        <li>✅ <strong>Qualidade:</strong> Compromisso com excelência em cada etapa da produção e
-                            distribuição.</li>
-                        <li>🚀 <strong>Inovação:</strong> Constante busca por soluções criativas, tecnológicas e
-                            sustentáveis para surpreender o mercado.</li>
-                        <li>🤝 <strong>Comprometimento:</strong> Dedicação com nossos clientes, parceiros e com o
-                            planeta.</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <script>
         let descontoAplicado = 0;
 
@@ -1875,8 +1809,90 @@
             }
         }
 
+        // Função para abrir o carrinho
+        function abrirCarrinho() {
+            document.getElementById("carrinho").classList.add("aberto");
+            atualizarCarrinho(); // Atualiza o carrinho quando ele for aberto
+        }
+
+        // Função para fechar o carrinho
+        function fecharCarrinho() {
+            document.getElementById("carrinho").classList.remove("aberto");
+        }
+
+        // Função que atualiza o carrinho
+        function atualizarCarrinho() {
+            const lista = document.getElementById("listaCarrinho");
+            lista.innerHTML = "";  // Limpa os itens do carrinho
+            let subtotal = 0;  // Inicializa o subtotal
+            let qtdTotal = 0;  // Quantidade total de itens no carrinho
+
+            // Itera sobre cada item no carrinho
+            carrinho.forEach((item, i) => {
+                subtotal += item.preco * item.qtd;  // Soma o preço total de cada item
+                qtdTotal += item.qtd;  // Conta o total de itens no carrinho
+
+                // Adiciona cada item no HTML do carrinho
+                lista.innerHTML += `
+            <div class="item">
+                <img src="${item.imagem}" alt="${item.nome}">
+                <div class="item-info">
+                    <p><strong>${item.nome}</strong></p>
+                    <div class="qtd-controls">
+                        <button onclick="mudarQtd(${i}, -1)">−</button>
+                        <span>${item.qtd}</span>
+                        <button onclick="mudarQtd(${i}, 1)">+</button>
+                    </div>
+                    <p>R$ ${(item.preco * item.qtd).toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+            });
 
 
+
+            // Calcula o total com ou sem o desconto
+            let totalComDesconto = subtotal;
+            if (descontoAplicado > 0) {
+                totalComDesconto = subtotal * (1 - descontoAplicado);  // Aplica o desconto
+            }
+
+            // Atualiza o subtotal e total exibidos no carrinho
+            document.getElementById("subtotal").textContent = `R$ ${subtotal.toFixed(2)}`;  // Exibe o subtotal
+            document.getElementById("total").textContent = `R$ ${totalComDesconto.toFixed(2)}`;  // Exibe o total com o desconto
+            document.getElementById("qtdItens").textContent = `(${qtdTotal} item${qtdTotal > 1 ? "s" : ""})`;  // Exibe a quantidade total de itens
+        }
+
+        // Função para mudar a quantidade de um item
+        function mudarQtd(index, delta) {
+            carrinho[index].qtd += delta;  // Atualiza a quantidade do item
+            if (carrinho[index].qtd <= 0) carrinho.splice(index, 1);  // Remove o item se a quantidade for 0 ou negativa
+            atualizarCarrinho();  // Atualiza o carrinho após a mudança
+        }
+
+
+        let total = subtotal;
+        if (descontoAplicado > 0) {
+            total = subtotal * (1 - descontoAplicado);
+        }
+        function aplicarDesconto() {
+            const cupomInput = document.getElementById("cupom");
+            const cupom = cupomInput.value.trim().toUpperCase();
+
+            if (cupom === "APP15") {
+                if (descontoAplicado === 0) {
+                    descontoAplicado = 0.15;
+                    alert("Cupom de 15% aplicado com sucesso!");
+                    atualizarCarrinho();
+                } else {
+                    alert("O cupom já foi aplicado.");
+                }
+            } else {
+                alert("Cupom inválido.");
+            }
+        }
+
+        
     </script>
 
 </body>
