@@ -43,6 +43,7 @@
             <ul>
                 <button type="button" onclick="filtrarProdutos('todos')">TODOS</button>
                 <button type="button" onclick="filtrarProdutos('perfume')">PERFUMES</button>
+                <button type="button" onclick="filtrarProdutos('bodysplash')">BODYSPLASH</button>
                 <button type="button" onclick="filtrarProdutos('maquiagem')">MAQUIAGENS</button>
                 <button type="button" onclick="filtrarProdutos('cremes')">CREMES</button>
                 <button type="button" onclick="filtrarProdutos('skincare')">SKINCARE</button>
@@ -57,9 +58,18 @@
 
 
         <!-- banner-->
-        <div class="banner" id="banner">
+        <div class="banner" id="bannerPrincipal">
             <img src="../assets/css/img/banner.png" alt="banner da empresa">
         </div>
+
+        <div class="banner" id="bannerMaquiagem">
+            <img src="../assets/css/img/bannermackeup.PNG" alt="banner  maquiagem">
+        </div>
+
+        <div class="banner" id="bannerSkincare">
+            <img src="../assets/css/img/bannerskincare.jpg" alt="banner  skincare">
+        </div>
+        
 
         <h2 id="titulo-categoria" class="titulo-categoria"></h2>
     </header>
@@ -116,6 +126,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.3</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Creme sonho encantado</p>
                 <p class="descricao-produto">Toque leve e mágico para o dia a dia.</p>
@@ -194,6 +205,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.6</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Creme luz do oriente</p>
                 <p class="descricao-produto">Nutrição intensa com toque sedoso e luxuoso.</p>
@@ -221,6 +233,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.9</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Perfume j. de almura</p>
                 <p class="descricao-produto">Um sopro floral envolvente, puro e encantador.</p>
@@ -260,6 +273,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.1</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Perfume sombra nobre</p>
                 <p class="descricao-produto">Elegância profunda com notas de madeira e mistério.</p>
@@ -310,6 +324,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">3.3</span>
+
                 </div>
                 <p class="nome-produto">Perfume aceanic</p>
                 <p class="descricao-produto">Essência sofisticada, ideal para quem ama leveza.</p>
@@ -348,6 +363,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.3</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Perfume lírio</p>
                 <p class="descricao-produto">Delicadeza e magia em cada gota.</p>
@@ -541,6 +557,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.8</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Sabonete orvalho suave</p>
                 <p class="descricao-produto">Hidratação com fragrância verde suave.</p>
@@ -565,6 +582,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.7</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Sabonete áurea</p>
                 <p class="descricao-produto">Mistério envolvente com notas sofisticadas.</p>
@@ -602,6 +620,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.5</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Sabonete cravo</p>
                 <p class="descricao-produto">Aroma intenso e revitalizante natural.</p>
@@ -626,6 +645,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.8</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Sabonete framboesa</p>
                 <p class="descricao-produto">Doce e suavemente refrescante.</p>
@@ -674,6 +694,7 @@
                 <div class="selo-avaliacao">
                     <span class="estrela">★</span>
                     <span class="nota">4.1</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Sabonete maresia</p>
                 <p class="descricao-produto">Brisa do mar na sua pele.</p>
@@ -742,6 +763,7 @@
                 <img src="../assets/css/img/skincare/firmador.PNG" alt="Firmador">
                 <div class="selo-avaliacao"><span class="estrela">★</span>
                     <span class="nota">4.7</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Sérum firmador</p>
                 <p class="descricao-produto">Promove firmeza e elasticidade.</p>
@@ -787,6 +809,7 @@
                 <img src="../assets/css/img/skincare/hidratante.PNG" alt="Hidratante">
                 <div class="selo-avaliacao"><span class="estrela">★</span>
                     <span class="nota">4.8</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Floralis hidratante</p>
                 <p class="descricao-produto">Hidratação profunda e duradoura skincare.</p>
@@ -820,6 +843,7 @@
                 <img src="../assets/css/img/skincare/renova.PNG" alt="Renova">
                 <div class="selo-avaliacao"><span class="estrela">★</span>
                     <span class="nota">4.6</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Floralis renova</p>
                 <p class="descricao-produto">Estimula renovação celular skincare.</p>
@@ -865,6 +889,7 @@
                 <img src="../assets/css/img/skincare/mascaracravos.PNG" alt="Regeneração Máscara">
                 <div class="selo-avaliacao"><span class="estrela">★</span>
                     <span class="nota">4.3</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Máscara regeneração</p>
                 <p class="descricao-produto">Ajuda a renovar e suavizar.</p>
@@ -876,6 +901,7 @@
                 <img src="../assets/css/img/skincare/vitaminacmascara.PNG" alt="Vitamina C Máscara">
                 <div class="selo-avaliacao"><span class="estrela">★</span>
                     <span class="nota">4.9</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Máscara vitamina C</p>
                 <p class="descricao-produto">Ilumina e uniformiza a pele.</p>
@@ -899,6 +925,7 @@
                 <img src="../assets/css/img/maquiagem/batom.PNG" alt="Batom">
                 <div class="selo-avaliacao"><span class="estrela">★</span>
                     <span class="nota">4.5</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Batom</p>
                 <p class="descricao-produto">Cor intensa e hidratação cremosa.</p>
@@ -943,6 +970,7 @@
                 <img src="../assets/css/img/maquiagem/deliniador.png" alt="Deliniador">
                 <div class="selo-avaliacao"><span class="estrela">★</span>
                     <span class="nota">4.3</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Deliniador</p>
                 <p class="descricao-produto">Traços precisos e longa duração.</p>
@@ -976,6 +1004,7 @@
                 <img src="../assets/css/img/maquiagem/iluminador.png" alt="Iluminador">
                 <div class="selo-avaliacao"><span class="estrela">★</span>
                     <span class="nota">4.5</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Iluminador</p>
                 <p class="descricao-produto">Realça e ilumina o rosto.</p>
@@ -1020,6 +1049,7 @@
                 <img src="../assets/css/img/maquiagem/prime.png" alt="Prime">
                 <div class="selo-avaliacao"><span class="estrela">★</span>
                     <span class="nota">4.4</span>
+                    <span class="tag">Best-Seller</span>
                 </div>
                 <p class="nome-produto">Prime</p>
                 <p class="descricao-produto">Prepara pele para maquiagem perfeita.</p>
@@ -1052,7 +1082,9 @@
             <!-- bodysplash -->
             <div class="produto bodysplash">
                 <img src="../assets/css/img/bodysplash/aurora.png" alt="Aurora">
-                <div class="selo-avaliacao"><span class="estrela">★</span><span class="nota">4.4</span></div>
+                <div class="selo-avaliacao"><span class="estrela">★</span>
+                    <span class="nota">4.3</span>
+                </div>
                 <p class="nome-produto">Bodysplash aurora</p>
                 <p class="descricao-produto">Fragrância fresca e revigorante.</p>
                 <p class="preco-produto">R$ 42,90</p>
@@ -1799,12 +1831,27 @@
                 produtosFiltrados.forEach(p => p.style.display = 'block');
             }
 
-            const banner = document.getElementById("banner");
-            if (banner) {
+            const bannerPrincipal = document.getElementById("bannerPrincipal");
+            const bannerMaquiagem = document.getElementById("bannerMaquiagem");
+            const bannerSkincare = document.getElementById("bannerSkincare");
+
+            if (bannerPrincipal && bannerMaquiagem && bannerSkincare) {
                 if (categoria === "todos") {
-                    banner.style.display = "block"; // mostra só em "todos"
+                    bannerPrincipal.style.display = "block";
+                    bannerMaquiagem.style.display = "none";
+                    bannerSkincare.style.display = "none";
+                } else if (categoria === "maquiagem") {
+                    bannerPrincipal.style.display = "none";
+                    bannerMaquiagem.style.display = "block";
+                    bannerSkincare.style.display = "none";
+                } else if (categoria === "skincare") {
+                    bannerPrincipal.style.display = "none";
+                    bannerMaquiagem.style.display = "none";
+                    bannerSkincare.style.display = "block";
                 } else {
-                    banner.style.display = "none";  // esconde nas outras abas
+                    bannerPrincipal.style.display = "none";
+                    bannerMaquiagem.style.display = "none";
+                    bannerSkincare.style.display = "none";
                 }
             }
         }
@@ -1892,7 +1939,7 @@
             }
         }
 
-        
+
     </script>
 
 </body>
