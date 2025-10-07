@@ -1263,4 +1263,15 @@ nav button:focus {
     margin-right: 0;
     font-size: 13px;
   }
+
+  #opcoesFrete label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+#opcoesFrete p {
+    margin: 4px 0;
+}
 }

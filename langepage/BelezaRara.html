@@ -51,7 +51,6 @@
                 <button type="button" onclick="filtrarProdutos('kits')">KITS</button>
                 <button type="button" onclick="filtrarProdutos('historia')">HISTÓRIA</button>
                 <button type="button" onclick="filtrarProdutos('localizacao')">LOCALIZAÇÃO</button>
-                <button type="button" onclick="filtrarProdutos('apoios')">APOIOS</button>
                 <button type="button" onclick="filtrarProdutos('politicas')">POLÍTICAS</button>
             </ul>
         </nav>
@@ -69,7 +68,24 @@
         <div class="banner" id="bannerSkincare">
             <img src="../assets/css/img/bannerskincare.jpg" alt="banner  skincare">
         </div>
-        
+
+        <div class="banner" id="bannerPerfume">
+            <img src="../assets/css/img/bannerperfumes.jpg" alt="banner perfume">
+        </div>
+
+        <div class="banner" id="bannerBodysplash">
+            <img src="../assets/css/img/bannerbodysplash.PNG" alt="banner bodysplash">
+        </div>
+
+        <div class="banner" id="bannerSabonetes">
+            <img src="../assets/css/img/bannersabonetes.PNG" alt="banner sabonetes">
+        </div>
+
+        <div class="banner" id="bannerCremes">
+            <img src="../assets/css/img/bannercreme.PNG" alt="banner cremes">
+        </div>
+       
+
 
         <h2 id="titulo-categoria" class="titulo-categoria"></h2>
     </header>
@@ -1346,6 +1362,7 @@
                     <input type="text" id="cep" placeholder="Insira o CEP">
                     <button onclick="calcularFrete()">Estimar</button>
                 </div>
+                <div id="opcoesFrete"></div>
             </div>
 
             <div class="linha-carrinho total">
@@ -1452,24 +1469,6 @@
                     Para informações sobre horários de funcionamento ou agendamentos, entre em contato através dos
                     canais acima.
                 </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="apoios">
-        <div class="logos-apoio">
-            <!-- Exemplo de logos de empresas parceiras -->
-            <div class="logo-item">
-                <img src="../assets/css/img/loreal.png" alt="Loreal Paris">
-            </div>
-            <div class="logo-item">
-                <img src="../assets/css/img/inovar.png" alt="inovar">
-            </div>
-            <div class="logo-item">
-                <img src="../assets/css/img/renner.png" alt="Renner">
-            </div>
-            <div class="logo-item">
-                <img src="../assets/css/img/Beauty Fair.png" alt="Beauty Fair">
             </div>
         </div>
     </div>
@@ -1623,12 +1622,26 @@
         const resultadosContainer = document.getElementById('resultadosBusca');
 
         // Exemplo de produtos (você pode importar isso de um JSON depois)
-        const produtos = [
-            { nome: 'Perfume Elegante', descricao: 'Fragrância marcante e duradoura' },
-            { nome: 'Kit Skincare', descricao: 'Limpeza, tônico e hidratação' },
-            { nome: 'Maquiagem Glam', descricao: 'Paleta de sombras brilhante' },
-            { nome: 'Sabonete Natural', descricao: 'Com extratos vegetais' },
-            { nome: 'Creme Hidratante', descricao: 'Pele macia e sedosa' }
+        const produtos = [{
+                nome: 'Perfume Elegante',
+                descricao: 'Fragrância marcante e duradoura'
+            },
+            {
+                nome: 'Kit Skincare',
+                descricao: 'Limpeza, tônico e hidratação'
+            },
+            {
+                nome: 'Maquiagem Glam',
+                descricao: 'Paleta de sombras brilhante'
+            },
+            {
+                nome: 'Sabonete Natural',
+                descricao: 'Com extratos vegetais'
+            },
+            {
+                nome: 'Creme Hidratante',
+                descricao: 'Pele macia e sedosa'
+            }
         ];
 
         document.getElementById('formBusca').addEventListener('submit', function (e) {
@@ -1651,7 +1664,8 @@
 
                 if (nome.includes(termo) || descricao.includes(termo)) {
                     encontrou = true;
-                    const clone = produto.cloneNode(true); // Clona o produto para mostrar na área de resultados
+                    const clone = produto.cloneNode(
+                        true); // Clona o produto para mostrar na área de resultados
                     resultadosContainer.appendChild(clone);
                 }
             });
@@ -1690,7 +1704,12 @@
             if (existente) {
                 existente.qtd += 1;
             } else {
-                carrinho.push({ nome, preco, qtd: 1, imagem });
+                carrinho.push({
+                    nome,
+                    preco,
+                    qtd: 1,
+                    imagem
+                });
             }
             atualizarCarrinho();
         }
@@ -1744,7 +1763,8 @@
 
                 // ativa tab clicada
                 tab.classList.add("active");
-                document.querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`).classList.add("active");
+                document.querySelector(`.tab-content[data-content="${tab.dataset.tab}"]`).classList.add(
+                    "active");
             });
         });
 
@@ -1834,24 +1854,76 @@
             const bannerPrincipal = document.getElementById("bannerPrincipal");
             const bannerMaquiagem = document.getElementById("bannerMaquiagem");
             const bannerSkincare = document.getElementById("bannerSkincare");
+            const bannerPerfume = document.getElementById("bannerPerfume");
+            const bannerBodysplash = document.getElementById("bannerBodysplash");
+            const bannerSabonetes = document.getElementById("bannerSabonetes");
+            const bannerCremes = document.getElementById("bannerCremes");
 
-            if (bannerPrincipal && bannerMaquiagem && bannerSkincare) {
+            if (bannerPrincipal && bannerMaquiagem && bannerSkincare && bannerPerfume &&bannerBodysplash && bannerSabonetes && bannerCremes) {
                 if (categoria === "todos") {
                     bannerPrincipal.style.display = "block";
                     bannerMaquiagem.style.display = "none";
                     bannerSkincare.style.display = "none";
+                    bannerPerfume.style.display ="none";
+                    bannerBodysplash.style.display ="none";
+                    bannerSabonetes.style.display ="none";
+                    bannerCremes.style.display ="none";
                 } else if (categoria === "maquiagem") {
                     bannerPrincipal.style.display = "none";
                     bannerMaquiagem.style.display = "block";
                     bannerSkincare.style.display = "none";
+                    bannerPerfume.style.display ="none";
+                    bannerBodysplash.style.display ="none";
+                    bannerSabonetes.style.display ="none";
+                    bannerCremes.style.display ="none";
                 } else if (categoria === "skincare") {
                     bannerPrincipal.style.display = "none";
                     bannerMaquiagem.style.display = "none";
                     bannerSkincare.style.display = "block";
-                } else {
+                    bannerPerfume.style.display ="none";
+                    bannerBodysplash.style.display ="none";
+                    bannerSabonetes.style.display ="none";
+                    bannerCremes.style.display ="none";
+                } else if (categoria==="perfume"){
                     bannerPrincipal.style.display = "none";
                     bannerMaquiagem.style.display = "none";
                     bannerSkincare.style.display = "none";
+                    bannerPerfume.style.display ="block";
+                    bannerBodysplash.style.display ="none";
+                    bannerSabonetes.style.display ="none";
+                    bannerCremes.style.display ="none";
+                }else if(categoria==="bodysplash"){
+                    bannerPrincipal.style.display = "none";
+                    bannerMaquiagem.style.display = "none";
+                    bannerSkincare.style.display = "none";
+                    bannerPerfume.style.display ="none";
+                    bannerBodysplash.style.display ="block";
+                    bannerSabonetes.style.display ="none";
+                    bannerCremes.style.display ="none";
+                }else if(categoria ==="sabonete"){
+                    bannerPrincipal.style.display = "none";
+                    bannerMaquiagem.style.display = "none";
+                    bannerSkincare.style.display = "none";
+                    bannerPerfume.style.display ="none";
+                    bannerBodysplash.style.display ="none";
+                    bannerSabonetes.style.display ="block";
+                    bannerCremes.style.display ="none";
+                }else if (categoria==="cremes"){
+                    bannerPrincipal.style.display = "none";
+                    bannerMaquiagem.style.display = "none";
+                    bannerSkincare.style.display = "none";
+                    bannerPerfume.style.display ="none";
+                    bannerBodysplash.style.display ="none";
+                    bannerSabonetes.style.display ="none";
+                    bannerCremes.style.display ="block";
+                }else{
+                    bannerPrincipal.style.display = "none";
+                    bannerMaquiagem.style.display = "none";
+                    bannerSkincare.style.display = "none";
+                    bannerPerfume.style.display ="none";
+                    bannerBodysplash.style.display ="none";
+                    bannerSabonetes.style.display ="none";
+                    bannerCremes.style.display ="none";
                 }
             }
         }
@@ -1870,14 +1942,14 @@
         // Função que atualiza o carrinho
         function atualizarCarrinho() {
             const lista = document.getElementById("listaCarrinho");
-            lista.innerHTML = "";  // Limpa os itens do carrinho
-            let subtotal = 0;  // Inicializa o subtotal
-            let qtdTotal = 0;  // Quantidade total de itens no carrinho
+            lista.innerHTML = ""; // Limpa os itens do carrinho
+            let subtotal = 0; // Inicializa o subtotal
+            let qtdTotal = 0; // Quantidade total de itens no carrinho
 
             // Itera sobre cada item no carrinho
             carrinho.forEach((item, i) => {
-                subtotal += item.preco * item.qtd;  // Soma o preço total de cada item
-                qtdTotal += item.qtd;  // Conta o total de itens no carrinho
+                subtotal += item.preco * item.qtd; // Soma o preço total de cada item
+                qtdTotal += item.qtd; // Conta o total de itens no carrinho
 
                 // Adiciona cada item no HTML do carrinho
                 lista.innerHTML += `
@@ -1901,20 +1973,22 @@
             // Calcula o total com ou sem o desconto
             let totalComDesconto = subtotal;
             if (descontoAplicado > 0) {
-                totalComDesconto = subtotal * (1 - descontoAplicado);  // Aplica o desconto
+                totalComDesconto = subtotal * (1 - descontoAplicado); // Aplica o desconto
             }
 
             // Atualiza o subtotal e total exibidos no carrinho
-            document.getElementById("subtotal").textContent = `R$ ${subtotal.toFixed(2)}`;  // Exibe o subtotal
-            document.getElementById("total").textContent = `R$ ${totalComDesconto.toFixed(2)}`;  // Exibe o total com o desconto
-            document.getElementById("qtdItens").textContent = `(${qtdTotal} item${qtdTotal > 1 ? "s" : ""})`;  // Exibe a quantidade total de itens
+            document.getElementById("subtotal").textContent = `R$ ${subtotal.toFixed(2)}`; // Exibe o subtotal
+            document.getElementById("total").textContent =
+                `R$ ${totalComDesconto.toFixed(2)}`; // Exibe o total com o desconto
+            document.getElementById("qtdItens").textContent =
+                `(${qtdTotal} item${qtdTotal > 1 ? "s" : ""})`; // Exibe a quantidade total de itens
         }
 
         // Função para mudar a quantidade de um item
         function mudarQtd(index, delta) {
-            carrinho[index].qtd += delta;  // Atualiza a quantidade do item
-            if (carrinho[index].qtd <= 0) carrinho.splice(index, 1);  // Remove o item se a quantidade for 0 ou negativa
-            atualizarCarrinho();  // Atualiza o carrinho após a mudança
+            carrinho[index].qtd += delta; // Atualiza a quantidade do item
+            if (carrinho[index].qtd <= 0) carrinho.splice(index, 1); // Remove o item se a quantidade for 0 ou negativa
+            atualizarCarrinho(); // Atualiza o carrinho após a mudança
         }
 
 
@@ -1922,6 +1996,7 @@
         if (descontoAplicado > 0) {
             total = subtotal * (1 - descontoAplicado);
         }
+
         function aplicarDesconto() {
             const cupomInput = document.getElementById("cupom");
             const cupom = cupomInput.value.trim().toUpperCase();
@@ -1939,7 +2014,74 @@
             }
         }
 
+        function calcularFrete() {
+            const cepDestino = document.getElementById("cep").value.trim();
+            const cepOrigem = "77065-000"; // Seu CEP
+            const containerFrete = document.getElementById("opcoesFrete");
 
+            if (cepDestino === "") {
+                alert("Por favor, insira um CEP válido.");
+                return;
+            }
+
+            // Simula cálculo (você pode ajustar os valores)
+            let fretes = [];
+            if (cepDestino.startsWith("77")) {
+                fretes = [{
+                        tipo: "Entrega Econômica",
+                        valor: 15.00,
+                        prazo: "5 dias úteis"
+                    },
+                    {
+                        tipo: "Entrega Rápida",
+                        valor: 25.00,
+                        prazo: "2 dias úteis"
+                    }
+                ];
+            } else {
+                fretes = [{
+                        tipo: "Entrega Econômica",
+                        valor: 25.00,
+                        prazo: "8 dias úteis"
+                    },
+                    {
+                        tipo: "Entrega Rápida",
+                        valor: 40.00,
+                        prazo: "4 dias úteis"
+                    }
+                ];
+            }
+
+            // Gera opções de frete
+            containerFrete.innerHTML = `
+        <p><strong>Opções de frete para ${cepDestino}:</strong></p>
+        ${fretes.map((f, i) => `
+            <div style="margin-top: 5px;">
+                <label>
+                    <input type="radio" name="frete" value="${f.valor}" data-tipo="${f.tipo}" data-prazo="${f.prazo}" onchange="aplicarFrete(this)">
+                    ${f.tipo} — R$ ${f.valor.toFixed(2).replace(".", ",")} (${f.prazo})
+                </label>
+            </div>
+        `).join("")}
+        <p id="mensagemFrete" style="margin-top:8px;color:green;font-weight:bold;"></p>
+    `;
+        }
+
+        function aplicarFrete(radio) {
+            const freteValor = parseFloat(radio.value);
+            const tipoFrete = radio.dataset.tipo;
+            const prazo = radio.dataset.prazo;
+            const subtotal = parseFloat(document.getElementById("subtotal").innerText.replace("R$", "").replace(",",
+                "."));
+
+            // Atualiza o total
+            const total = subtotal + freteValor;
+            document.getElementById("total").innerText = `R$ ${total.toFixed(2).replace(".", ",")}`;
+
+            // Atualiza mensagem de confirmação (só uma)
+            const msg = document.getElementById("mensagemFrete");
+            msg.textContent = `${tipoFrete} aplicado com sucesso ✅ (Entrega em ${prazo})`;
+        }
     </script>
 
 </body>
