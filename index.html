@@ -1376,6 +1376,22 @@
 
             <button class="btn-finalizar" onclick="finalizarPedido()">FINALIZAR PEDIDO</button>
         </div>
+        <div id="msgTopo" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1D074D;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+">
+            Pedido finalizado com sucesso!
+        </div>
     </div>
 
     <section class="historia sobre-nos">
@@ -1402,7 +1418,7 @@
                     verdade é um caminho, uma escolha feita com o coração.</p>
             </div>
         </div>
-        
+
         <h2>VALORES</h2>
         <div class="text-valores">
             <ul>
@@ -2114,6 +2130,23 @@
             // Atualiza mensagem de confirmação (só uma)
             const msg = document.getElementById("mensagemFrete");
             msg.textContent = `${tipoFrete} aplicado com sucesso ✅ (Entrega em ${prazo})`;
+        }
+
+        function finalizarPedido() {
+            // Seleciona o container do carrinho pelo id
+            const resumo = document.getElementById('resumoCarrinho');
+            if (resumo) {
+                resumo.innerHTML = '';  // limpa todo o conteúdo do carrinho
+            }
+
+            // Mostra a mensagem fixa no topo
+            const msg = document.getElementById('msgTopo');
+            msg.style.display = 'block';
+
+            // Oculta a mensagem após 3 segundos
+            setTimeout(() => {
+                msg.style.display = 'none';
+            }, 3000);
         }
     </script>
 
